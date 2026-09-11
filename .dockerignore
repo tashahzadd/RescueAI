@@ -1,0 +1,8 @@
+node_modules
+frontend/dist
+backend/rescueai.db
+backend/__pycache__
+**/__pycache__
+*.pyc
+.git
+.env

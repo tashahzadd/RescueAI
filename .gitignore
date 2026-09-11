@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+frontend/dist/
+.env
+*.pem
+*.key
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+_release_backup_*/
+*.db-shm
+*.db-wal

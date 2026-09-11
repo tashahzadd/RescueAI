@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: rescueai
+      POSTGRES_USER: rescueai
+      POSTGRES_PASSWORD: rescueai_local_change_me
+    volumes:
+      - rescueai_postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql+psycopg2://rescueai:rescueai_local_change_me@db:5432/rescueai
+      PORT: 8000
+    ports:
+      - "8000:8000"
+
+volumes:
+  rescueai_postgres_data:
