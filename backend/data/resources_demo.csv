@@ -1,0 +1,321 @@
+name,resource_type,latitude,longitude,capabilities,equipment,capacity,organization,trust_level
+Sargodha Ambulance 001 (DEMO),Ambulance,32.050351,72.655352,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Karachi Ambulance 002 (DEMO),Ambulance,24.832875,67.017947,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Sialkot Ambulance 003 (DEMO),Ambulance,32.461725,74.494459,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Multan Ambulance 004 (DEMO),Ambulance,30.124358,71.503819,emergency medical transport,first aid|stretcher|oxygen,4,Punjab Emergency Services (DEMO),DEMO
+Larkana Ambulance 005 (DEMO),Ambulance,27.565249,68.23396,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Abbottabad Ambulance 006 (DEMO),Ambulance,34.144976,73.216083,emergency medical transport,first aid|stretcher|oxygen,3,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Hyderabad Ambulance 007 (DEMO),Ambulance,25.428005,68.346362,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Rawalpindi Ambulance 008 (DEMO),Ambulance,33.555229,73.005977,emergency medical transport,first aid|stretcher|oxygen,3,Punjab Emergency Services (DEMO),DEMO
+Dera Ismail Khan Ambulance 009 (DEMO),Ambulance,31.847581,70.904236,emergency medical transport,first aid|stretcher|oxygen,4,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Karachi Ambulance 010 (DEMO),Ambulance,24.846222,67.010105,emergency medical transport,first aid|stretcher|oxygen,3,Sindh Emergency Services (DEMO),DEMO
+Gujranwala Ambulance 011 (DEMO),Ambulance,32.20202,74.162708,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Swat Ambulance 012 (DEMO),Ambulance,35.256666,72.450672,emergency medical transport,first aid|stretcher|oxygen,1,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Rawalpindi Ambulance 013 (DEMO),Ambulance,33.561839,73.040288,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Lahore Ambulance 014 (DEMO),Ambulance,31.529365,74.327288,emergency medical transport,first aid|stretcher|oxygen,1,Punjab Emergency Services (DEMO),DEMO
+Sialkot Ambulance 015 (DEMO),Ambulance,32.47148,74.538939,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Faisalabad Ambulance 016 (DEMO),Ambulance,31.434296,73.164777,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Peshawar Ambulance 017 (DEMO),Ambulance,34.0391,71.54422,emergency medical transport,first aid|stretcher|oxygen,2,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Dera Ismail Khan Ambulance 018 (DEMO),Ambulance,31.852853,70.894782,emergency medical transport,first aid|stretcher|oxygen,1,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Larkana Ambulance 019 (DEMO),Ambulance,27.590004,68.238646,emergency medical transport,first aid|stretcher|oxygen,3,Sindh Emergency Services (DEMO),DEMO
+Larkana Ambulance 020 (DEMO),Ambulance,27.558946,68.239228,emergency medical transport,first aid|stretcher|oxygen,4,Sindh Emergency Services (DEMO),DEMO
+Hyderabad Ambulance 021 (DEMO),Ambulance,25.370774,68.374949,emergency medical transport,first aid|stretcher|oxygen,3,Sindh Emergency Services (DEMO),DEMO
+Mardan Ambulance 022 (DEMO),Ambulance,34.19389,72.028947,emergency medical transport,first aid|stretcher|oxygen,3,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Larkana Ambulance 023 (DEMO),Ambulance,27.593828,68.212967,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Abbottabad Ambulance 024 (DEMO),Ambulance,34.194077,73.197199,emergency medical transport,first aid|stretcher|oxygen,2,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Kohat Ambulance 025 (DEMO),Ambulance,33.576451,71.419147,emergency medical transport,first aid|stretcher|oxygen,4,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Sialkot Ambulance 026 (DEMO),Ambulance,32.492263,74.505499,emergency medical transport,first aid|stretcher|oxygen,1,Punjab Emergency Services (DEMO),DEMO
+Peshawar Ambulance 027 (DEMO),Ambulance,33.988119,71.551835,emergency medical transport,first aid|stretcher|oxygen,3,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Swat Ambulance 028 (DEMO),Ambulance,35.211512,72.411345,emergency medical transport,first aid|stretcher|oxygen,2,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Faisalabad Ambulance 029 (DEMO),Ambulance,31.482167,73.16131,emergency medical transport,first aid|stretcher|oxygen,3,Punjab Emergency Services (DEMO),DEMO
+Gilgit Ambulance 030 (DEMO),Ambulance,35.939137,74.309138,emergency medical transport,first aid|stretcher|oxygen,1,Gilgit-Baltistan Emergency Services (DEMO),DEMO
+Turbat Ambulance 031 (DEMO),Ambulance,25.988191,63.069726,emergency medical transport,first aid|stretcher|oxygen,2,Balochistan Emergency Services (DEMO),DEMO
+Hyderabad Ambulance 032 (DEMO),Ambulance,25.414376,68.360557,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Sialkot Ambulance 033 (DEMO),Ambulance,32.493702,74.495731,emergency medical transport,first aid|stretcher|oxygen,3,Punjab Emergency Services (DEMO),DEMO
+Khuzdar Ambulance 034 (DEMO),Ambulance,27.823217,66.603226,emergency medical transport,first aid|stretcher|oxygen,1,Balochistan Emergency Services (DEMO),DEMO
+Nawabshah Ambulance 035 (DEMO),Ambulance,26.248915,68.380513,emergency medical transport,first aid|stretcher|oxygen,4,Sindh Emergency Services (DEMO),DEMO
+Dera Ismail Khan Ambulance 036 (DEMO),Ambulance,31.864959,70.903989,emergency medical transport,first aid|stretcher|oxygen,2,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Karachi Ambulance 037 (DEMO),Ambulance,24.85897,67.004586,emergency medical transport,first aid|stretcher|oxygen,3,Sindh Emergency Services (DEMO),DEMO
+Multan Ambulance 038 (DEMO),Ambulance,30.164962,71.557405,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Peshawar Ambulance 039 (DEMO),Ambulance,34.008029,71.536918,emergency medical transport,first aid|stretcher|oxygen,3,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Rawalpindi Ambulance 040 (DEMO),Ambulance,33.56633,72.99037,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Karachi Ambulance 041 (DEMO),Ambulance,24.827172,67.004875,emergency medical transport,first aid|stretcher|oxygen,2,Sindh Emergency Services (DEMO),DEMO
+Karachi Ambulance 042 (DEMO),Ambulance,24.875249,66.970221,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Islamabad Ambulance 043 (DEMO),Ambulance,33.709574,73.01786,emergency medical transport,first aid|stretcher|oxygen,2,ICT Emergency Services (DEMO),DEMO
+Lahore Ambulance 044 (DEMO),Ambulance,31.548679,74.346346,emergency medical transport,first aid|stretcher|oxygen,4,Punjab Emergency Services (DEMO),DEMO
+Mirpur Khas Ambulance 045 (DEMO),Ambulance,25.525008,69.004494,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Karachi Ambulance 046 (DEMO),Ambulance,24.855874,66.995751,emergency medical transport,first aid|stretcher|oxygen,4,Sindh Emergency Services (DEMO),DEMO
+Turbat Ambulance 047 (DEMO),Ambulance,25.971092,63.070742,emergency medical transport,first aid|stretcher|oxygen,1,Balochistan Emergency Services (DEMO),DEMO
+Karachi Ambulance 048 (DEMO),Ambulance,24.876675,67.022141,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Mirpur Khas Ambulance 049 (DEMO),Ambulance,25.505215,69.007403,emergency medical transport,first aid|stretcher|oxygen,4,Sindh Emergency Services (DEMO),DEMO
+Hyderabad Ambulance 050 (DEMO),Ambulance,25.393384,68.384014,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Faisalabad Ambulance 051 (DEMO),Ambulance,31.475694,73.138523,emergency medical transport,first aid|stretcher|oxygen,1,Punjab Emergency Services (DEMO),DEMO
+Sargodha Ambulance 052 (DEMO),Ambulance,32.086441,72.637133,emergency medical transport,first aid|stretcher|oxygen,1,Punjab Emergency Services (DEMO),DEMO
+Islamabad Ambulance 053 (DEMO),Ambulance,33.708809,73.024542,emergency medical transport,first aid|stretcher|oxygen,4,ICT Emergency Services (DEMO),DEMO
+Faisalabad Ambulance 054 (DEMO),Ambulance,31.475926,73.163171,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Rawalpindi Ambulance 055 (DEMO),Ambulance,33.599072,73.000464,emergency medical transport,first aid|stretcher|oxygen,4,Punjab Emergency Services (DEMO),DEMO
+Lahore Ambulance 056 (DEMO),Ambulance,31.563461,74.359735,emergency medical transport,first aid|stretcher|oxygen,4,Punjab Emergency Services (DEMO),DEMO
+Hyderabad Ambulance 057 (DEMO),Ambulance,25.38177,68.39061,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Abbottabad Ambulance 058 (DEMO),Ambulance,34.137802,73.227392,emergency medical transport,first aid|stretcher|oxygen,2,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Karachi Ambulance 059 (DEMO),Ambulance,24.861248,67.025694,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Sialkot Ambulance 060 (DEMO),Ambulance,32.506765,74.504364,emergency medical transport,first aid|stretcher|oxygen,1,Punjab Emergency Services (DEMO),DEMO
+Islamabad Ambulance 061 (DEMO),Ambulance,33.689277,73.053424,emergency medical transport,first aid|stretcher|oxygen,1,ICT Emergency Services (DEMO),DEMO
+Bahawalpur Ambulance 062 (DEMO),Ambulance,29.389946,71.689457,emergency medical transport,first aid|stretcher|oxygen,3,Punjab Emergency Services (DEMO),DEMO
+Islamabad Ambulance 063 (DEMO),Ambulance,33.663698,73.063033,emergency medical transport,first aid|stretcher|oxygen,2,ICT Emergency Services (DEMO),DEMO
+Lahore Ambulance 064 (DEMO),Ambulance,31.523861,74.353785,emergency medical transport,first aid|stretcher|oxygen,4,Punjab Emergency Services (DEMO),DEMO
+Lahore Ambulance 065 (DEMO),Ambulance,31.567331,74.313678,emergency medical transport,first aid|stretcher|oxygen,4,Punjab Emergency Services (DEMO),DEMO
+Bahawalpur Ambulance 066 (DEMO),Ambulance,29.40001,71.655599,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Multan Ambulance 067 (DEMO),Ambulance,30.131772,71.514331,emergency medical transport,first aid|stretcher|oxygen,1,Punjab Emergency Services (DEMO),DEMO
+Khuzdar Ambulance 068 (DEMO),Ambulance,27.790867,66.592742,emergency medical transport,first aid|stretcher|oxygen,3,Balochistan Emergency Services (DEMO),DEMO
+Sialkot Ambulance 069 (DEMO),Ambulance,32.528606,74.533678,emergency medical transport,first aid|stretcher|oxygen,1,Punjab Emergency Services (DEMO),DEMO
+Dera Ghazi Khan Ambulance 070 (DEMO),Ambulance,30.059922,70.665023,emergency medical transport,first aid|stretcher|oxygen,1,Punjab Emergency Services (DEMO),DEMO
+Islamabad Ambulance 071 (DEMO),Ambulance,33.6588,73.02098,emergency medical transport,first aid|stretcher|oxygen,1,ICT Emergency Services (DEMO),DEMO
+Mardan Ambulance 072 (DEMO),Ambulance,34.174781,72.007823,emergency medical transport,first aid|stretcher|oxygen,2,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Peshawar Ambulance 073 (DEMO),Ambulance,33.994352,71.534297,emergency medical transport,first aid|stretcher|oxygen,3,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Multan Ambulance 074 (DEMO),Ambulance,30.140078,71.553471,emergency medical transport,first aid|stretcher|oxygen,1,Punjab Emergency Services (DEMO),DEMO
+Karachi Ambulance 075 (DEMO),Ambulance,24.85535,66.985468,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Lahore Ambulance 076 (DEMO),Ambulance,31.523857,74.377186,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Mardan Ambulance 077 (DEMO),Ambulance,34.202518,72.018038,emergency medical transport,first aid|stretcher|oxygen,1,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Karachi Ambulance 078 (DEMO),Ambulance,24.891854,67.014471,emergency medical transport,first aid|stretcher|oxygen,2,Sindh Emergency Services (DEMO),DEMO
+Gujranwala Ambulance 079 (DEMO),Ambulance,32.211122,74.200276,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Rawalpindi Ambulance 080 (DEMO),Ambulance,33.533028,73.007426,emergency medical transport,first aid|stretcher|oxygen,1,Punjab Emergency Services (DEMO),DEMO
+Islamabad Ambulance 081 (DEMO),Ambulance,33.664105,73.030367,emergency medical transport,first aid|stretcher|oxygen,1,ICT Emergency Services (DEMO),DEMO
+Lahore Ambulance 082 (DEMO),Ambulance,31.553892,74.36983,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Islamabad Ambulance 083 (DEMO),Ambulance,33.665972,73.024275,emergency medical transport,first aid|stretcher|oxygen,2,ICT Emergency Services (DEMO),DEMO
+Khuzdar Ambulance 084 (DEMO),Ambulance,27.766735,66.63326,emergency medical transport,first aid|stretcher|oxygen,3,Balochistan Emergency Services (DEMO),DEMO
+Swat Ambulance 085 (DEMO),Ambulance,35.21652,72.437693,emergency medical transport,first aid|stretcher|oxygen,2,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Lahore Ambulance 086 (DEMO),Ambulance,31.569816,74.316167,emergency medical transport,first aid|stretcher|oxygen,1,Punjab Emergency Services (DEMO),DEMO
+Gwadar Ambulance 087 (DEMO),Ambulance,25.10697,62.344661,emergency medical transport,first aid|stretcher|oxygen,4,Balochistan Emergency Services (DEMO),DEMO
+Lahore Ambulance 088 (DEMO),Ambulance,31.572138,74.369593,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Karachi Ambulance 089 (DEMO),Ambulance,24.839219,66.989078,emergency medical transport,first aid|stretcher|oxygen,1,Sindh Emergency Services (DEMO),DEMO
+Gilgit Ambulance 090 (DEMO),Ambulance,35.905339,74.318504,emergency medical transport,first aid|stretcher|oxygen,4,Gilgit-Baltistan Emergency Services (DEMO),DEMO
+Peshawar Ambulance 091 (DEMO),Ambulance,34.039156,71.51308,emergency medical transport,first aid|stretcher|oxygen,1,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Karachi Ambulance 092 (DEMO),Ambulance,24.893628,66.9786,emergency medical transport,first aid|stretcher|oxygen,3,Sindh Emergency Services (DEMO),DEMO
+Karachi Ambulance 093 (DEMO),Ambulance,24.86746,66.990298,emergency medical transport,first aid|stretcher|oxygen,3,Sindh Emergency Services (DEMO),DEMO
+Rawalpindi Ambulance 094 (DEMO),Ambulance,33.598997,72.989995,emergency medical transport,first aid|stretcher|oxygen,2,Punjab Emergency Services (DEMO),DEMO
+Mirpur Khas Ambulance 095 (DEMO),Ambulance,25.541515,68.976118,emergency medical transport,first aid|stretcher|oxygen,2,Sindh Emergency Services (DEMO),DEMO
+Lahore Ambulance 096 (DEMO),Ambulance,31.519598,74.355097,emergency medical transport,first aid|stretcher|oxygen,3,Punjab Emergency Services (DEMO),DEMO
+Bahawalpur Ambulance 097 (DEMO),Ambulance,29.407037,71.657324,emergency medical transport,first aid|stretcher|oxygen,3,Punjab Emergency Services (DEMO),DEMO
+Multan Ambulance 098 (DEMO),Ambulance,30.169183,71.512733,emergency medical transport,first aid|stretcher|oxygen,3,Punjab Emergency Services (DEMO),DEMO
+Gujranwala Ambulance 099 (DEMO),Ambulance,32.166129,74.206045,emergency medical transport,first aid|stretcher|oxygen,4,Punjab Emergency Services (DEMO),DEMO
+Peshawar Ambulance 100 (DEMO),Ambulance,34.043296,71.532986,emergency medical transport,first aid|stretcher|oxygen,3,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Rawalpindi Search & Rescue Team 001 (DEMO),Search & Rescue Team,33.588461,73.003171,urban search and rescue,cutting tools|thermal camera|rescue equipment,5,Punjab Emergency Services (DEMO),DEMO
+Rawalpindi Search & Rescue Team 002 (DEMO),Search & Rescue Team,33.570699,73.027729,urban search and rescue,cutting tools|thermal camera|rescue equipment,8,Punjab Emergency Services (DEMO),DEMO
+Faisalabad Search & Rescue Team 003 (DEMO),Search & Rescue Team,31.462694,73.135782,urban search and rescue,cutting tools|thermal camera|rescue equipment,5,Punjab Emergency Services (DEMO),DEMO
+Dera Ghazi Khan Search & Rescue Team 004 (DEMO),Search & Rescue Team,30.040965,70.64627,urban search and rescue,cutting tools|thermal camera|rescue equipment,6,Punjab Emergency Services (DEMO),DEMO
+Karachi Search & Rescue Team 005 (DEMO),Search & Rescue Team,24.89234,66.982541,urban search and rescue,cutting tools|thermal camera|rescue equipment,6,Sindh Emergency Services (DEMO),DEMO
+Nawabshah Search & Rescue Team 006 (DEMO),Search & Rescue Team,26.223139,68.37671,urban search and rescue,cutting tools|thermal camera|rescue equipment,5,Sindh Emergency Services (DEMO),DEMO
+Skardu Search & Rescue Team 007 (DEMO),Search & Rescue Team,35.304889,75.652094,urban search and rescue,cutting tools|thermal camera|rescue equipment,8,Gilgit-Baltistan Emergency Services (DEMO),DEMO
+Rawalpindi Search & Rescue Team 008 (DEMO),Search & Rescue Team,33.574184,72.99551,urban search and rescue,cutting tools|thermal camera|rescue equipment,8,Punjab Emergency Services (DEMO),DEMO
+Faisalabad Search & Rescue Team 009 (DEMO),Search & Rescue Team,31.432479,73.145924,urban search and rescue,cutting tools|thermal camera|rescue equipment,4,Punjab Emergency Services (DEMO),DEMO
+Khuzdar Search & Rescue Team 010 (DEMO),Search & Rescue Team,27.825231,66.643683,urban search and rescue,cutting tools|thermal camera|rescue equipment,8,Balochistan Emergency Services (DEMO),DEMO
+Larkana Search & Rescue Team 011 (DEMO),Search & Rescue Team,27.580288,68.226014,urban search and rescue,cutting tools|thermal camera|rescue equipment,8,Sindh Emergency Services (DEMO),DEMO
+Karachi Search & Rescue Team 012 (DEMO),Search & Rescue Team,24.843144,67.025484,urban search and rescue,cutting tools|thermal camera|rescue equipment,8,Sindh Emergency Services (DEMO),DEMO
+Karachi Search & Rescue Team 013 (DEMO),Search & Rescue Team,24.858225,67.003279,urban search and rescue,cutting tools|thermal camera|rescue equipment,6,Sindh Emergency Services (DEMO),DEMO
+Muzaffarabad Search & Rescue Team 014 (DEMO),Search & Rescue Team,34.3974,73.478986,urban search and rescue,cutting tools|thermal camera|rescue equipment,8,AJK Emergency Services (DEMO),DEMO
+Quetta Search & Rescue Team 015 (DEMO),Search & Rescue Team,30.183151,67.002805,urban search and rescue,cutting tools|thermal camera|rescue equipment,8,Balochistan Emergency Services (DEMO),DEMO
+Faisalabad Search & Rescue Team 016 (DEMO),Search & Rescue Team,31.468024,73.15879,urban search and rescue,cutting tools|thermal camera|rescue equipment,6,Punjab Emergency Services (DEMO),DEMO
+Abbottabad Search & Rescue Team 017 (DEMO),Search & Rescue Team,34.170291,73.230372,urban search and rescue,cutting tools|thermal camera|rescue equipment,6,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Faisalabad Search & Rescue Team 018 (DEMO),Search & Rescue Team,31.465348,73.116415,urban search and rescue,cutting tools|thermal camera|rescue equipment,6,Punjab Emergency Services (DEMO),DEMO
+Lahore Search & Rescue Team 019 (DEMO),Search & Rescue Team,31.552511,74.318286,urban search and rescue,cutting tools|thermal camera|rescue equipment,5,Punjab Emergency Services (DEMO),DEMO
+Rawalpindi Search & Rescue Team 020 (DEMO),Search & Rescue Team,33.540796,72.996877,urban search and rescue,cutting tools|thermal camera|rescue equipment,8,Punjab Emergency Services (DEMO),DEMO
+Rawalpindi Search & Rescue Team 021 (DEMO),Search & Rescue Team,33.568083,73.011004,urban search and rescue,cutting tools|thermal camera|rescue equipment,5,Punjab Emergency Services (DEMO),DEMO
+Quetta Search & Rescue Team 022 (DEMO),Search & Rescue Team,30.172063,66.993886,urban search and rescue,cutting tools|thermal camera|rescue equipment,4,Balochistan Emergency Services (DEMO),DEMO
+Gwadar Search & Rescue Team 023 (DEMO),Search & Rescue Team,25.144992,62.314127,urban search and rescue,cutting tools|thermal camera|rescue equipment,4,Balochistan Emergency Services (DEMO),DEMO
+Islamabad Search & Rescue Team 024 (DEMO),Search & Rescue Team,33.670303,73.040199,urban search and rescue,cutting tools|thermal camera|rescue equipment,8,ICT Emergency Services (DEMO),DEMO
+Multan Search & Rescue Team 025 (DEMO),Search & Rescue Team,30.173924,71.545891,urban search and rescue,cutting tools|thermal camera|rescue equipment,5,Punjab Emergency Services (DEMO),DEMO
+Faisalabad Rescue Team 001 (DEMO),Rescue Team,31.434505,73.133995,general emergency rescue,rope rescue|first aid|water rescue equipment,8,Punjab Emergency Services (DEMO),DEMO
+Lahore Rescue Team 002 (DEMO),Rescue Team,31.56224,74.336902,general emergency rescue,rope rescue|first aid|water rescue equipment,5,Punjab Emergency Services (DEMO),DEMO
+Quetta Rescue Team 003 (DEMO),Rescue Team,30.209168,67.008651,general emergency rescue,rope rescue|first aid|water rescue equipment,4,Balochistan Emergency Services (DEMO),DEMO
+Islamabad Rescue Team 004 (DEMO),Rescue Team,33.690832,73.05931,general emergency rescue,rope rescue|first aid|water rescue equipment,4,ICT Emergency Services (DEMO),DEMO
+Sargodha Rescue Team 005 (DEMO),Rescue Team,32.058099,72.668419,general emergency rescue,rope rescue|first aid|water rescue equipment,4,Punjab Emergency Services (DEMO),DEMO
+Mirpur Khas Rescue Team 006 (DEMO),Rescue Team,25.514815,69.007829,general emergency rescue,rope rescue|first aid|water rescue equipment,6,Sindh Emergency Services (DEMO),DEMO
+Abbottabad Rescue Team 007 (DEMO),Rescue Team,34.160339,73.239141,general emergency rescue,rope rescue|first aid|water rescue equipment,8,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Mirpur Khas Rescue Team 008 (DEMO),Rescue Team,25.497633,68.977357,general emergency rescue,rope rescue|first aid|water rescue equipment,4,Sindh Emergency Services (DEMO),DEMO
+Skardu Rescue Team 009 (DEMO),Rescue Team,35.286597,75.64381,general emergency rescue,rope rescue|first aid|water rescue equipment,4,Gilgit-Baltistan Emergency Services (DEMO),DEMO
+Abbottabad Rescue Team 010 (DEMO),Rescue Team,34.200273,73.200455,general emergency rescue,rope rescue|first aid|water rescue equipment,4,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Bahawalpur Rescue Team 011 (DEMO),Rescue Team,29.377298,71.681749,general emergency rescue,rope rescue|first aid|water rescue equipment,4,Punjab Emergency Services (DEMO),DEMO
+Gujranwala Rescue Team 012 (DEMO),Rescue Team,32.167958,74.208463,general emergency rescue,rope rescue|first aid|water rescue equipment,6,Punjab Emergency Services (DEMO),DEMO
+Hyderabad Rescue Team 013 (DEMO),Rescue Team,25.403507,68.375155,general emergency rescue,rope rescue|first aid|water rescue equipment,4,Sindh Emergency Services (DEMO),DEMO
+Swat Rescue Team 014 (DEMO),Rescue Team,35.199164,72.412573,general emergency rescue,rope rescue|first aid|water rescue equipment,4,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Islamabad Rescue Team 015 (DEMO),Rescue Team,33.689706,73.076462,general emergency rescue,rope rescue|first aid|water rescue equipment,8,ICT Emergency Services (DEMO),DEMO
+Rawalpindi Rescue Team 016 (DEMO),Rescue Team,33.580151,72.98722,general emergency rescue,rope rescue|first aid|water rescue equipment,5,Punjab Emergency Services (DEMO),DEMO
+Karachi Rescue Team 017 (DEMO),Rescue Team,24.879774,67.025621,general emergency rescue,rope rescue|first aid|water rescue equipment,4,Sindh Emergency Services (DEMO),DEMO
+Kohat Rescue Team 018 (DEMO),Rescue Team,33.586515,71.417575,general emergency rescue,rope rescue|first aid|water rescue equipment,8,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Dera Ghazi Khan Rescue Team 019 (DEMO),Rescue Team,30.025927,70.645128,general emergency rescue,rope rescue|first aid|water rescue equipment,4,Punjab Emergency Services (DEMO),DEMO
+Gwadar Rescue Team 020 (DEMO),Rescue Team,25.148963,62.294888,general emergency rescue,rope rescue|first aid|water rescue equipment,6,Balochistan Emergency Services (DEMO),DEMO
+Sargodha Rescue Team 021 (DEMO),Rescue Team,32.10661,72.685612,general emergency rescue,rope rescue|first aid|water rescue equipment,8,Punjab Emergency Services (DEMO),DEMO
+Hyderabad Rescue Team 022 (DEMO),Rescue Team,25.397522,68.368332,general emergency rescue,rope rescue|first aid|water rescue equipment,8,Sindh Emergency Services (DEMO),DEMO
+Faisalabad Rescue Team 023 (DEMO),Rescue Team,31.473201,73.141473,general emergency rescue,rope rescue|first aid|water rescue equipment,6,Punjab Emergency Services (DEMO),DEMO
+Gwadar Rescue Team 024 (DEMO),Rescue Team,25.149551,62.293566,general emergency rescue,rope rescue|first aid|water rescue equipment,8,Balochistan Emergency Services (DEMO),DEMO
+Mirpur Khas Rescue Team 025 (DEMO),Rescue Team,25.52443,69.018723,general emergency rescue,rope rescue|first aid|water rescue equipment,8,Sindh Emergency Services (DEMO),DEMO
+Lahore Fire Unit 001 (DEMO),Fire Unit,31.549301,74.331351,fire suppression,fire hose|water tank|fire suppression equipment,5,Punjab Emergency Services (DEMO),DEMO
+Larkana Fire Unit 002 (DEMO),Fire Unit,27.579848,68.201124,fire suppression,fire hose|water tank|fire suppression equipment,6,Sindh Emergency Services (DEMO),DEMO
+Peshawar Fire Unit 003 (DEMO),Fire Unit,33.999439,71.490611,fire suppression,fire hose|water tank|fire suppression equipment,4,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Karachi Fire Unit 004 (DEMO),Fire Unit,24.876105,67.0003,fire suppression,fire hose|water tank|fire suppression equipment,4,Sindh Emergency Services (DEMO),DEMO
+Peshawar Fire Unit 005 (DEMO),Fire Unit,34.025313,71.524257,fire suppression,fire hose|water tank|fire suppression equipment,4,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Karachi Fire Unit 006 (DEMO),Fire Unit,24.841212,67.014525,fire suppression,fire hose|water tank|fire suppression equipment,5,Sindh Emergency Services (DEMO),DEMO
+Dera Ghazi Khan Fire Unit 007 (DEMO),Fire Unit,30.046931,70.638543,fire suppression,fire hose|water tank|fire suppression equipment,5,Punjab Emergency Services (DEMO),DEMO
+Rawalpindi Fire Unit 008 (DEMO),Fire Unit,33.582315,73.005055,fire suppression,fire hose|water tank|fire suppression equipment,6,Punjab Emergency Services (DEMO),DEMO
+Faisalabad Fire Unit 009 (DEMO),Fire Unit,31.436864,73.116138,fire suppression,fire hose|water tank|fire suppression equipment,6,Punjab Emergency Services (DEMO),DEMO
+Sukkur Fire Unit 010 (DEMO),Fire Unit,27.697769,68.82531,fire suppression,fire hose|water tank|fire suppression equipment,6,Sindh Emergency Services (DEMO),DEMO
+Hyderabad Fire Unit 011 (DEMO),Fire Unit,25.376147,68.356694,fire suppression,fire hose|water tank|fire suppression equipment,6,Sindh Emergency Services (DEMO),DEMO
+Sialkot Fire Unit 012 (DEMO),Fire Unit,32.512715,74.529675,fire suppression,fire hose|water tank|fire suppression equipment,4,Punjab Emergency Services (DEMO),DEMO
+Quetta Fire Unit 013 (DEMO),Fire Unit,30.165537,66.965262,fire suppression,fire hose|water tank|fire suppression equipment,5,Balochistan Emergency Services (DEMO),DEMO
+Karachi Fire Unit 014 (DEMO),Fire Unit,24.863089,66.985302,fire suppression,fire hose|water tank|fire suppression equipment,4,Sindh Emergency Services (DEMO),DEMO
+Gujranwala Fire Unit 015 (DEMO),Fire Unit,32.201519,74.16834,fire suppression,fire hose|water tank|fire suppression equipment,5,Punjab Emergency Services (DEMO),DEMO
+Karachi Fire Unit 016 (DEMO),Fire Unit,24.826559,66.986004,fire suppression,fire hose|water tank|fire suppression equipment,5,Sindh Emergency Services (DEMO),DEMO
+Faisalabad Fire Unit 017 (DEMO),Fire Unit,31.428305,73.103596,fire suppression,fire hose|water tank|fire suppression equipment,5,Punjab Emergency Services (DEMO),DEMO
+Karachi Fire Unit 018 (DEMO),Fire Unit,24.830274,67.000522,fire suppression,fire hose|water tank|fire suppression equipment,6,Sindh Emergency Services (DEMO),DEMO
+Bahawalpur Fire Unit 019 (DEMO),Fire Unit,29.364353,71.659044,fire suppression,fire hose|water tank|fire suppression equipment,6,Punjab Emergency Services (DEMO),DEMO
+Muzaffarabad Fire Unit 020 (DEMO),Fire Unit,34.340963,73.453473,fire suppression,fire hose|water tank|fire suppression equipment,6,AJK Emergency Services (DEMO),DEMO
+Abbottabad Fire Unit 021 (DEMO),Fire Unit,34.176242,73.241852,fire suppression,fire hose|water tank|fire suppression equipment,4,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Swat Fire Unit 022 (DEMO),Fire Unit,35.214326,72.454395,fire suppression,fire hose|water tank|fire suppression equipment,5,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Turbat Fire Unit 023 (DEMO),Fire Unit,26.036602,63.046377,fire suppression,fire hose|water tank|fire suppression equipment,6,Balochistan Emergency Services (DEMO),DEMO
+Karachi Fire Unit 024 (DEMO),Fire Unit,24.892908,66.973046,fire suppression,fire hose|water tank|fire suppression equipment,4,Sindh Emergency Services (DEMO),DEMO
+Bahawalpur Fire Unit 025 (DEMO),Fire Unit,29.379125,71.654283,fire suppression,fire hose|water tank|fire suppression equipment,4,Punjab Emergency Services (DEMO),DEMO
+Hyderabad Fire Unit 026 (DEMO),Fire Unit,25.366255,68.322987,fire suppression,fire hose|water tank|fire suppression equipment,5,Sindh Emergency Services (DEMO),DEMO
+Peshawar Fire Unit 027 (DEMO),Fire Unit,34.012994,71.492185,fire suppression,fire hose|water tank|fire suppression equipment,5,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Peshawar Fire Unit 028 (DEMO),Fire Unit,34.029309,71.521682,fire suppression,fire hose|water tank|fire suppression equipment,6,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Nawabshah Fire Unit 029 (DEMO),Fire Unit,26.227719,68.430387,fire suppression,fire hose|water tank|fire suppression equipment,6,Sindh Emergency Services (DEMO),DEMO
+Dera Ghazi Khan Fire Unit 030 (DEMO),Fire Unit,30.086457,70.62956,fire suppression,fire hose|water tank|fire suppression equipment,6,Punjab Emergency Services (DEMO),DEMO
+Nawabshah Fire Unit 031 (DEMO),Fire Unit,26.219629,68.393594,fire suppression,fire hose|water tank|fire suppression equipment,4,Sindh Emergency Services (DEMO),DEMO
+Karachi Fire Unit 032 (DEMO),Fire Unit,24.837315,66.987633,fire suppression,fire hose|water tank|fire suppression equipment,6,Sindh Emergency Services (DEMO),DEMO
+Quetta Fire Unit 033 (DEMO),Fire Unit,30.209283,66.970741,fire suppression,fire hose|water tank|fire suppression equipment,5,Balochistan Emergency Services (DEMO),DEMO
+Peshawar Fire Unit 034 (DEMO),Fire Unit,34.029081,71.555887,fire suppression,fire hose|water tank|fire suppression equipment,6,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Multan Fire Unit 035 (DEMO),Fire Unit,30.153143,71.531763,fire suppression,fire hose|water tank|fire suppression equipment,5,Punjab Emergency Services (DEMO),DEMO
+Mardan Fire Unit 036 (DEMO),Fire Unit,34.20616,71.989911,fire suppression,fire hose|water tank|fire suppression equipment,4,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Muzaffarabad Fire Unit 037 (DEMO),Fire Unit,34.393517,73.476364,fire suppression,fire hose|water tank|fire suppression equipment,4,AJK Emergency Services (DEMO),DEMO
+Skardu Fire Unit 038 (DEMO),Fire Unit,35.30916,75.617166,fire suppression,fire hose|water tank|fire suppression equipment,4,Gilgit-Baltistan Emergency Services (DEMO),DEMO
+Abbottabad Fire Unit 039 (DEMO),Fire Unit,34.146063,73.222827,fire suppression,fire hose|water tank|fire suppression equipment,5,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Islamabad Fire Unit 040 (DEMO),Fire Unit,33.662104,73.053873,fire suppression,fire hose|water tank|fire suppression equipment,6,ICT Emergency Services (DEMO),DEMO
+Dera Ismail Khan Medical Team 001 (DEMO),Medical Team,31.864334,70.899601,emergency medical support,medical kits|oxygen|trauma equipment,5,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Lahore Medical Team 002 (DEMO),Medical Team,31.561609,74.368641,emergency medical support,medical kits|oxygen|trauma equipment,5,Punjab Emergency Services (DEMO),DEMO
+Rawalpindi Medical Team 003 (DEMO),Medical Team,33.564783,73.028281,emergency medical support,medical kits|oxygen|trauma equipment,5,Punjab Emergency Services (DEMO),DEMO
+Dera Ismail Khan Medical Team 004 (DEMO),Medical Team,31.835007,70.898538,emergency medical support,medical kits|oxygen|trauma equipment,5,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Mirpur Khas Medical Team 005 (DEMO),Medical Team,25.500015,69.030078,emergency medical support,medical kits|oxygen|trauma equipment,8,Sindh Emergency Services (DEMO),DEMO
+Quetta Medical Team 006 (DEMO),Medical Team,30.144881,67.000856,emergency medical support,medical kits|oxygen|trauma equipment,5,Balochistan Emergency Services (DEMO),DEMO
+Rawalpindi Medical Team 007 (DEMO),Medical Team,33.543231,73.007225,emergency medical support,medical kits|oxygen|trauma equipment,5,Punjab Emergency Services (DEMO),DEMO
+Bahawalpur Medical Team 008 (DEMO),Medical Team,29.413799,71.662849,emergency medical support,medical kits|oxygen|trauma equipment,8,Punjab Emergency Services (DEMO),DEMO
+Karachi Medical Team 009 (DEMO),Medical Team,24.845862,67.027759,emergency medical support,medical kits|oxygen|trauma equipment,5,Sindh Emergency Services (DEMO),DEMO
+Karachi Medical Team 010 (DEMO),Medical Team,24.89382,67.008721,emergency medical support,medical kits|oxygen|trauma equipment,4,Sindh Emergency Services (DEMO),DEMO
+Peshawar Medical Team 011 (DEMO),Medical Team,34.001853,71.490857,emergency medical support,medical kits|oxygen|trauma equipment,5,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Karachi Medical Team 012 (DEMO),Medical Team,24.895158,67.030005,emergency medical support,medical kits|oxygen|trauma equipment,5,Sindh Emergency Services (DEMO),DEMO
+Muzaffarabad Medical Team 013 (DEMO),Medical Team,34.38034,73.446878,emergency medical support,medical kits|oxygen|trauma equipment,8,AJK Emergency Services (DEMO),DEMO
+Lahore Medical Team 014 (DEMO),Medical Team,31.564079,74.337684,emergency medical support,medical kits|oxygen|trauma equipment,5,Punjab Emergency Services (DEMO),DEMO
+Gilgit Medical Team 015 (DEMO),Medical Team,35.902861,74.312189,emergency medical support,medical kits|oxygen|trauma equipment,5,Gilgit-Baltistan Emergency Services (DEMO),DEMO
+Sukkur Medical Team 016 (DEMO),Medical Team,27.731356,68.84004,emergency medical support,medical kits|oxygen|trauma equipment,4,Sindh Emergency Services (DEMO),DEMO
+Turbat Medical Team 017 (DEMO),Medical Team,25.986637,63.0803,emergency medical support,medical kits|oxygen|trauma equipment,5,Balochistan Emergency Services (DEMO),DEMO
+Lahore Medical Team 018 (DEMO),Medical Team,31.56984,74.327302,emergency medical support,medical kits|oxygen|trauma equipment,4,Punjab Emergency Services (DEMO),DEMO
+Lahore Medical Team 019 (DEMO),Medical Team,31.535599,74.349686,emergency medical support,medical kits|oxygen|trauma equipment,8,Punjab Emergency Services (DEMO),DEMO
+Faisalabad Medical Team 020 (DEMO),Medical Team,31.425802,73.137701,emergency medical support,medical kits|oxygen|trauma equipment,5,Punjab Emergency Services (DEMO),DEMO
+Lahore Medical Team 021 (DEMO),Medical Team,31.568101,74.335005,emergency medical support,medical kits|oxygen|trauma equipment,5,Punjab Emergency Services (DEMO),DEMO
+Turbat Medical Team 022 (DEMO),Medical Team,26.035954,63.041716,emergency medical support,medical kits|oxygen|trauma equipment,5,Balochistan Emergency Services (DEMO),DEMO
+Nawabshah Medical Team 023 (DEMO),Medical Team,26.263488,68.378055,emergency medical support,medical kits|oxygen|trauma equipment,8,Sindh Emergency Services (DEMO),DEMO
+Faisalabad Medical Team 024 (DEMO),Medical Team,31.47934,73.126686,emergency medical support,medical kits|oxygen|trauma equipment,8,Punjab Emergency Services (DEMO),DEMO
+Kohat Medical Team 025 (DEMO),Medical Team,33.592541,71.425347,emergency medical support,medical kits|oxygen|trauma equipment,4,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Karachi Medical Team 026 (DEMO),Medical Team,24.893275,66.98934,emergency medical support,medical kits|oxygen|trauma equipment,4,Sindh Emergency Services (DEMO),DEMO
+Turbat Medical Team 027 (DEMO),Medical Team,25.998121,63.061817,emergency medical support,medical kits|oxygen|trauma equipment,5,Balochistan Emergency Services (DEMO),DEMO
+Karachi Medical Team 028 (DEMO),Medical Team,24.835791,67.027065,emergency medical support,medical kits|oxygen|trauma equipment,4,Sindh Emergency Services (DEMO),DEMO
+Karachi Medical Team 029 (DEMO),Medical Team,24.880407,66.984652,emergency medical support,medical kits|oxygen|trauma equipment,8,Sindh Emergency Services (DEMO),DEMO
+Peshawar Medical Team 030 (DEMO),Medical Team,34.025589,71.549524,emergency medical support,medical kits|oxygen|trauma equipment,8,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Gwadar Heavy Rescue Equipment 001 (DEMO),Heavy Rescue Equipment,25.118001,62.309666,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,3,Balochistan Emergency Services (DEMO),DEMO
+Khuzdar Heavy Rescue Equipment 002 (DEMO),Heavy Rescue Equipment,27.799156,66.619571,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,3,Balochistan Emergency Services (DEMO),DEMO
+Karachi Heavy Rescue Equipment 003 (DEMO),Heavy Rescue Equipment,24.869881,67.030565,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,1,Sindh Emergency Services (DEMO),DEMO
+Mardan Heavy Rescue Equipment 004 (DEMO),Heavy Rescue Equipment,34.194278,71.994991,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,3,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Peshawar Heavy Rescue Equipment 005 (DEMO),Heavy Rescue Equipment,33.987136,71.501546,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,2,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Islamabad Heavy Rescue Equipment 006 (DEMO),Heavy Rescue Equipment,33.652619,73.06863,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,2,ICT Emergency Services (DEMO),DEMO
+Lahore Heavy Rescue Equipment 007 (DEMO),Heavy Rescue Equipment,31.544848,74.325694,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,2,Punjab Emergency Services (DEMO),DEMO
+Gujranwala Heavy Rescue Equipment 008 (DEMO),Heavy Rescue Equipment,32.208176,74.171399,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,1,Punjab Emergency Services (DEMO),DEMO
+Sialkot Heavy Rescue Equipment 009 (DEMO),Heavy Rescue Equipment,32.486278,74.535719,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,2,Punjab Emergency Services (DEMO),DEMO
+Islamabad Heavy Rescue Equipment 010 (DEMO),Heavy Rescue Equipment,33.659418,73.04518,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,2,ICT Emergency Services (DEMO),DEMO
+Faisalabad Heavy Rescue Equipment 011 (DEMO),Heavy Rescue Equipment,31.462079,73.162924,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,2,Punjab Emergency Services (DEMO),DEMO
+Islamabad Heavy Rescue Equipment 012 (DEMO),Heavy Rescue Equipment,33.696833,73.023958,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,2,ICT Emergency Services (DEMO),DEMO
+Muzaffarabad Heavy Rescue Equipment 013 (DEMO),Heavy Rescue Equipment,34.404136,73.457041,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,2,AJK Emergency Services (DEMO),DEMO
+Peshawar Heavy Rescue Equipment 014 (DEMO),Heavy Rescue Equipment,34.012079,71.511049,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,2,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Gwadar Heavy Rescue Equipment 015 (DEMO),Heavy Rescue Equipment,25.098866,62.314196,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,2,Balochistan Emergency Services (DEMO),DEMO
+Gujranwala Heavy Rescue Equipment 016 (DEMO),Heavy Rescue Equipment,32.222188,74.180166,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,3,Punjab Emergency Services (DEMO),DEMO
+Rawalpindi Heavy Rescue Equipment 017 (DEMO),Heavy Rescue Equipment,33.530667,73.042455,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,3,Punjab Emergency Services (DEMO),DEMO
+Gilgit Heavy Rescue Equipment 018 (DEMO),Heavy Rescue Equipment,35.949543,74.325762,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,2,Gilgit-Baltistan Emergency Services (DEMO),DEMO
+Swat Heavy Rescue Equipment 019 (DEMO),Heavy Rescue Equipment,35.203808,72.446935,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,1,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Sargodha Heavy Rescue Equipment 020 (DEMO),Heavy Rescue Equipment,32.092062,72.683544,heavy rescue and debris removal,hydraulic cutter|lifting equipment|debris tools,3,Punjab Emergency Services (DEMO),DEMO
+Swat Water Tanker 001 (DEMO),Water Tanker,35.23536,72.400375,water supply support,water tank|pump,5000,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Islamabad Water Tanker 002 (DEMO),Water Tanker,33.694644,73.034525,water supply support,water tank|pump,8000,ICT Emergency Services (DEMO),DEMO
+Karachi Water Tanker 003 (DEMO),Water Tanker,24.85124,66.975299,water supply support,water tank|pump,8000,Sindh Emergency Services (DEMO),DEMO
+Lahore Water Tanker 004 (DEMO),Water Tanker,31.543785,74.322656,water supply support,water tank|pump,10000,Punjab Emergency Services (DEMO),DEMO
+Turbat Water Tanker 005 (DEMO),Water Tanker,25.99291,63.060126,water supply support,water tank|pump,8000,Balochistan Emergency Services (DEMO),DEMO
+Quetta Water Tanker 006 (DEMO),Water Tanker,30.162788,66.997728,water supply support,water tank|pump,8000,Balochistan Emergency Services (DEMO),DEMO
+Gilgit Water Tanker 007 (DEMO),Water Tanker,35.90646,74.334528,water supply support,water tank|pump,5000,Gilgit-Baltistan Emergency Services (DEMO),DEMO
+Faisalabad Water Tanker 008 (DEMO),Water Tanker,31.420671,73.152791,water supply support,water tank|pump,5000,Punjab Emergency Services (DEMO),DEMO
+Turbat Water Tanker 009 (DEMO),Water Tanker,26.017995,63.093596,water supply support,water tank|pump,10000,Balochistan Emergency Services (DEMO),DEMO
+Lahore Water Tanker 010 (DEMO),Water Tanker,31.570048,74.309574,water supply support,water tank|pump,10000,Punjab Emergency Services (DEMO),DEMO
+Karachi Water Tanker 011 (DEMO),Water Tanker,24.851501,67.018531,water supply support,water tank|pump,8000,Sindh Emergency Services (DEMO),DEMO
+Sialkot Water Tanker 012 (DEMO),Water Tanker,32.517069,74.55372,water supply support,water tank|pump,5000,Punjab Emergency Services (DEMO),DEMO
+Peshawar Water Tanker 013 (DEMO),Water Tanker,34.013103,71.533268,water supply support,water tank|pump,10000,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Lahore Water Tanker 014 (DEMO),Water Tanker,31.557406,74.353936,water supply support,water tank|pump,10000,Punjab Emergency Services (DEMO),DEMO
+Quetta Water Tanker 015 (DEMO),Water Tanker,30.208457,66.961153,water supply support,water tank|pump,8000,Balochistan Emergency Services (DEMO),DEMO
+Karachi Water Tanker 016 (DEMO),Water Tanker,24.828874,66.968705,water supply support,water tank|pump,8000,Sindh Emergency Services (DEMO),DEMO
+Karachi Water Tanker 017 (DEMO),Water Tanker,24.842136,67.003728,water supply support,water tank|pump,8000,Sindh Emergency Services (DEMO),DEMO
+Faisalabad Water Tanker 018 (DEMO),Water Tanker,31.462334,73.15202,water supply support,water tank|pump,10000,Punjab Emergency Services (DEMO),DEMO
+Rawalpindi Water Tanker 019 (DEMO),Water Tanker,33.582059,72.992717,water supply support,water tank|pump,8000,Punjab Emergency Services (DEMO),DEMO
+Dera Ghazi Khan Water Tanker 020 (DEMO),Water Tanker,30.079459,70.642896,water supply support,water tank|pump,8000,Punjab Emergency Services (DEMO),DEMO
+Karachi Shelter Unit 001 (DEMO),Shelter Unit,24.851637,66.997137,temporary emergency shelter,temporary shelter|blankets|lighting,20,Sindh Emergency Services (DEMO),DEMO
+Gwadar Shelter Unit 002 (DEMO),Shelter Unit,25.098355,62.335498,temporary emergency shelter,temporary shelter|blankets|lighting,50,Balochistan Emergency Services (DEMO),DEMO
+Islamabad Shelter Unit 003 (DEMO),Shelter Unit,33.694538,73.017139,temporary emergency shelter,temporary shelter|blankets|lighting,30,ICT Emergency Services (DEMO),DEMO
+Sukkur Shelter Unit 004 (DEMO),Shelter Unit,27.697951,68.847162,temporary emergency shelter,temporary shelter|blankets|lighting,30,Sindh Emergency Services (DEMO),DEMO
+Karachi Shelter Unit 005 (DEMO),Shelter Unit,24.840547,67.010865,temporary emergency shelter,temporary shelter|blankets|lighting,20,Sindh Emergency Services (DEMO),DEMO
+Karachi Shelter Unit 006 (DEMO),Shelter Unit,24.849046,67.035317,temporary emergency shelter,temporary shelter|blankets|lighting,50,Sindh Emergency Services (DEMO),DEMO
+Sukkur Shelter Unit 007 (DEMO),Shelter Unit,27.747487,68.826595,temporary emergency shelter,temporary shelter|blankets|lighting,50,Sindh Emergency Services (DEMO),DEMO
+Larkana Shelter Unit 008 (DEMO),Shelter Unit,27.584879,68.200299,temporary emergency shelter,temporary shelter|blankets|lighting,20,Sindh Emergency Services (DEMO),DEMO
+Kohat Shelter Unit 009 (DEMO),Shelter Unit,33.588619,71.434109,temporary emergency shelter,temporary shelter|blankets|lighting,20,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Skardu Shelter Unit 010 (DEMO),Shelter Unit,35.299915,75.654196,temporary emergency shelter,temporary shelter|blankets|lighting,20,Gilgit-Baltistan Emergency Services (DEMO),DEMO
+Dera Ghazi Khan Shelter Unit 011 (DEMO),Shelter Unit,30.022905,70.60084,temporary emergency shelter,temporary shelter|blankets|lighting,20,Punjab Emergency Services (DEMO),DEMO
+Sialkot Shelter Unit 012 (DEMO),Shelter Unit,32.460605,74.506476,temporary emergency shelter,temporary shelter|blankets|lighting,20,Punjab Emergency Services (DEMO),DEMO
+Mardan Shelter Unit 013 (DEMO),Shelter Unit,34.200726,72.040297,temporary emergency shelter,temporary shelter|blankets|lighting,30,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Faisalabad Shelter Unit 014 (DEMO),Shelter Unit,31.440743,73.141557,temporary emergency shelter,temporary shelter|blankets|lighting,30,Punjab Emergency Services (DEMO),DEMO
+Multan Shelter Unit 015 (DEMO),Shelter Unit,30.188679,71.492936,temporary emergency shelter,temporary shelter|blankets|lighting,50,Punjab Emergency Services (DEMO),DEMO
+Multan Shelter Unit 016 (DEMO),Shelter Unit,30.154563,71.557382,temporary emergency shelter,temporary shelter|blankets|lighting,20,Punjab Emergency Services (DEMO),DEMO
+Skardu Shelter Unit 017 (DEMO),Shelter Unit,35.321411,75.628139,temporary emergency shelter,temporary shelter|blankets|lighting,20,Gilgit-Baltistan Emergency Services (DEMO),DEMO
+Faisalabad Shelter Unit 018 (DEMO),Shelter Unit,31.479079,73.105144,temporary emergency shelter,temporary shelter|blankets|lighting,20,Punjab Emergency Services (DEMO),DEMO
+Lahore Shelter Unit 019 (DEMO),Shelter Unit,31.525083,74.317433,temporary emergency shelter,temporary shelter|blankets|lighting,50,Punjab Emergency Services (DEMO),DEMO
+Bahawalpur Shelter Unit 020 (DEMO),Shelter Unit,29.398985,71.671363,temporary emergency shelter,temporary shelter|blankets|lighting,50,Punjab Emergency Services (DEMO),DEMO
+Multan Utility Team 001 (DEMO),Utility Team,30.15426,71.53228,electrical and utility response,electrical tools|generator|safety equipment,4,Punjab Emergency Services (DEMO),DEMO
+Kohat Utility Team 002 (DEMO),Utility Team,33.554909,71.46053,electrical and utility response,electrical tools|generator|safety equipment,6,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Peshawar Utility Team 003 (DEMO),Utility Team,33.995152,71.521509,electrical and utility response,electrical tools|generator|safety equipment,4,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Rawalpindi Utility Team 004 (DEMO),Utility Team,33.588019,73.009811,electrical and utility response,electrical tools|generator|safety equipment,6,Punjab Emergency Services (DEMO),DEMO
+Karachi Utility Team 005 (DEMO),Utility Team,24.855573,67.012658,electrical and utility response,electrical tools|generator|safety equipment,5,Sindh Emergency Services (DEMO),DEMO
+Muzaffarabad Utility Team 006 (DEMO),Utility Team,34.383077,73.469299,electrical and utility response,electrical tools|generator|safety equipment,4,AJK Emergency Services (DEMO),DEMO
+Quetta Utility Team 007 (DEMO),Utility Team,30.151326,66.94676,electrical and utility response,electrical tools|generator|safety equipment,6,Balochistan Emergency Services (DEMO),DEMO
+Lahore Utility Team 008 (DEMO),Utility Team,31.523808,74.312799,electrical and utility response,electrical tools|generator|safety equipment,6,Punjab Emergency Services (DEMO),DEMO
+Gujranwala Utility Team 009 (DEMO),Utility Team,32.199601,74.188257,electrical and utility response,electrical tools|generator|safety equipment,6,Punjab Emergency Services (DEMO),DEMO
+Islamabad Utility Team 010 (DEMO),Utility Team,33.679006,73.077009,electrical and utility response,electrical tools|generator|safety equipment,4,ICT Emergency Services (DEMO),DEMO
+Gilgit Utility Team 011 (DEMO),Utility Team,35.927829,74.298215,electrical and utility response,electrical tools|generator|safety equipment,6,Gilgit-Baltistan Emergency Services (DEMO),DEMO
+Multan Utility Team 012 (DEMO),Utility Team,30.133331,71.523653,electrical and utility response,electrical tools|generator|safety equipment,4,Punjab Emergency Services (DEMO),DEMO
+Lahore Utility Team 013 (DEMO),Utility Team,31.553639,74.316642,electrical and utility response,electrical tools|generator|safety equipment,5,Punjab Emergency Services (DEMO),DEMO
+Gujranwala Utility Team 014 (DEMO),Utility Team,32.209205,74.218661,electrical and utility response,electrical tools|generator|safety equipment,6,Punjab Emergency Services (DEMO),DEMO
+Sialkot Utility Team 015 (DEMO),Utility Team,32.504489,74.489738,electrical and utility response,electrical tools|generator|safety equipment,6,Punjab Emergency Services (DEMO),DEMO
+Quetta Utility Team 016 (DEMO),Utility Team,30.163521,66.952629,electrical and utility response,electrical tools|generator|safety equipment,6,Balochistan Emergency Services (DEMO),DEMO
+Abbottabad Utility Team 017 (DEMO),Utility Team,34.198308,73.211072,electrical and utility response,electrical tools|generator|safety equipment,4,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Turbat Utility Team 018 (DEMO),Utility Team,26.006942,63.053055,electrical and utility response,electrical tools|generator|safety equipment,4,Balochistan Emergency Services (DEMO),DEMO
+Mardan Utility Team 019 (DEMO),Utility Team,34.231927,71.994523,electrical and utility response,electrical tools|generator|safety equipment,6,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Larkana Utility Team 020 (DEMO),Utility Team,27.553388,68.201163,electrical and utility response,electrical tools|generator|safety equipment,5,Sindh Emergency Services (DEMO),DEMO
+Lahore Food Supply 001 (DEMO),Food Supply,31.537407,74.374499,emergency food distribution,food packs|drinking water,50,Punjab Emergency Services (DEMO),DEMO
+Karachi Food Supply 002 (DEMO),Food Supply,24.829383,66.977119,emergency food distribution,food packs|drinking water,50,Sindh Emergency Services (DEMO),DEMO
+Karachi Food Supply 003 (DEMO),Food Supply,24.831411,66.997118,emergency food distribution,food packs|drinking water,30,Sindh Emergency Services (DEMO),DEMO
+Faisalabad Food Supply 004 (DEMO),Food Supply,31.446343,73.119122,emergency food distribution,food packs|drinking water,50,Punjab Emergency Services (DEMO),DEMO
+Karachi Food Supply 005 (DEMO),Food Supply,24.855794,66.985927,emergency food distribution,food packs|drinking water,50,Sindh Emergency Services (DEMO),DEMO
+Sialkot Food Supply 006 (DEMO),Food Supply,32.496385,74.509489,emergency food distribution,food packs|drinking water,20,Punjab Emergency Services (DEMO),DEMO
+Rawalpindi Food Supply 007 (DEMO),Food Supply,33.572053,72.982438,emergency food distribution,food packs|drinking water,30,Punjab Emergency Services (DEMO),DEMO
+Muzaffarabad Food Supply 008 (DEMO),Food Supply,34.388714,73.489591,emergency food distribution,food packs|drinking water,30,AJK Emergency Services (DEMO),DEMO
+Lahore Food Supply 009 (DEMO),Food Supply,31.515241,74.360891,emergency food distribution,food packs|drinking water,20,Punjab Emergency Services (DEMO),DEMO
+Karachi Food Supply 010 (DEMO),Food Supply,24.862981,66.982208,emergency food distribution,food packs|drinking water,50,Sindh Emergency Services (DEMO),DEMO
+Quetta Food Supply 011 (DEMO),Food Supply,30.201234,66.945045,emergency food distribution,food packs|drinking water,50,Balochistan Emergency Services (DEMO),DEMO
+Karachi Food Supply 012 (DEMO),Food Supply,24.827012,67.030581,emergency food distribution,food packs|drinking water,30,Sindh Emergency Services (DEMO),DEMO
+Gujranwala Food Supply 013 (DEMO),Food Supply,32.192838,74.209165,emergency food distribution,food packs|drinking water,30,Punjab Emergency Services (DEMO),DEMO
+Lahore Food Supply 014 (DEMO),Food Supply,31.543052,74.376234,emergency food distribution,food packs|drinking water,20,Punjab Emergency Services (DEMO),DEMO
+Kohat Food Supply 015 (DEMO),Food Supply,33.590169,71.472942,emergency food distribution,food packs|drinking water,30,Khyber Pakhtunkhwa Emergency Services (DEMO),DEMO
+Karachi Food Supply 016 (DEMO),Food Supply,24.884814,66.983132,emergency food distribution,food packs|drinking water,50,Sindh Emergency Services (DEMO),DEMO
+Rawalpindi Food Supply 017 (DEMO),Food Supply,33.535605,73.042837,emergency food distribution,food packs|drinking water,50,Punjab Emergency Services (DEMO),DEMO
+Lahore Food Supply 018 (DEMO),Food Supply,31.538015,74.320369,emergency food distribution,food packs|drinking water,50,Punjab Emergency Services (DEMO),DEMO
+Bahawalpur Food Supply 019 (DEMO),Food Supply,29.397742,71.662173,emergency food distribution,food packs|drinking water,30,Punjab Emergency Services (DEMO),DEMO
+Lahore Food Supply 020 (DEMO),Food Supply,31.581776,74.353781,emergency food distribution,food packs|drinking water,20,Punjab Emergency Services (DEMO),DEMO

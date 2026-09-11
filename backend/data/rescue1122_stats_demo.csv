@@ -1,0 +1,8 @@
+district,emergency_type,avg_annual_calls,avg_response_time_minutes,source_name,trust_level
+Lahore,Road Accident,12000,8,Synthetic - modeled on Rescue 1122 Punjab published statistics structure,DEMO
+Lahore,Fire,1500,9,Synthetic - modeled on Rescue 1122 Punjab published statistics structure,DEMO
+Rawalpindi,Road Accident,7000,8,Synthetic - modeled on Rescue 1122 Punjab published statistics structure,DEMO
+Faisalabad,Medical Emergency,9000,8,Synthetic - modeled on Rescue 1122 Punjab published statistics structure,DEMO
+Karachi,Road Accident,10000,10,Synthetic - modeled on Sindh emergency service reporting structure,DEMO
+Karachi,Building Collapse,150,12,Synthetic - modeled on Sindh emergency service reporting structure,DEMO
+Peshawar,Medical Emergency,5000,7,Synthetic - modeled on Rescue 1122 KP published statistics structure,DEMO
