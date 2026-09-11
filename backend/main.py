@@ -24,7 +24,7 @@ def ensure_auth_columns():
     Safely upgrade the existing users table for authentication.
 
     This does NOT delete, reset, reseed, or modify existing RescueAI data.
-    It only adds missing columns.
+    It only adds missing authentication columns.
     """
 
     try:
@@ -138,18 +138,15 @@ ensure_auth_columns()
 # ---------------------------------------------------------------------------
 
 app.include_router(incidents.router)
-
 app.include_router(misc.resources_router)
-
 app.include_router(misc.hospitals_router)
-
 app.include_router(misc.dashboard_router)
-
 app.include_router(misc.audit_router)
-
 app.include_router(misc.notifications_router)
-
 app.include_router(demo.router)
+
+# Authentication routes
+app.include_router(auth_routes.router)
 
 
 # ---------------------------------------------------------------------------
