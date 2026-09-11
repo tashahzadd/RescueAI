@@ -8,7 +8,7 @@ from sqlalchemy import text
 
 from database import Base, engine
 import models
-from routers import incidents, misc, demo
+from routers import incidents, misc, demo, auth_routes
 
 
 logging.basicConfig(level=logging.INFO)
