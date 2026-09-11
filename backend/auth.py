@@ -1,6 +1,7 @@
 import base64
 import hashlib
 import hmac
+import logging
 import os
 import secrets
 from datetime import datetime, timedelta, timezone
@@ -8,11 +9,13 @@ from datetime import datetime, timedelta, timezone
 import jwt
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from jwt import InvalidTokenError
 from sqlalchemy.orm import Session
 
 import models
 from database import get_db
+
+
+logger = logging.getLogger("rescueai.auth")
 
 
 # ---------------------------------------------------------------------------
@@ -37,11 +40,6 @@ security = HTTPBearer(auto_error=False)
 
 # ---------------------------------------------------------------------------
 # Password hashing
-#
-# PBKDF2-SHA256 is used so we do not store plain-text passwords.
-# Stored format:
-#
-# pbkdf2_sha256$iterations$salt$hash
 # ---------------------------------------------------------------------------
 
 PBKDF2_ITERATIONS = 600_000
@@ -122,35 +120,78 @@ def create_access_token(
     )
 
     now = datetime.now(timezone.utc)
+    expires_at = now + timedelta(minutes=expiry_minutes)
 
     payload = {
-        "sub": user.id,
-        "email": user.email,
-        "name": user.name,
-        "role": user.role,
-        "iat": now,
-        "exp": now + timedelta(minutes=expiry_minutes),
+        "sub": str(user.id),
+        "email": str(user.email),
+        "name": str(user.name),
+        "role": str(user.role),
+
+        # Integer timestamps make token handling unambiguous.
+        "iat": int(now.timestamp()),
+        "exp": int(expires_at.timestamp()),
     }
 
-    return jwt.encode(
+    token = jwt.encode(
         payload,
         SECRET_KEY,
         algorithm=ALGORITHM,
     )
 
+    return token
+
 
 def decode_access_token(token: str) -> dict:
+
+    # Remove accidental spaces / copied whitespace.
+    token = token.strip()
+
     try:
-        return jwt.decode(
+        payload = jwt.decode(
             token,
             SECRET_KEY,
             algorithms=[ALGORITHM],
         )
 
-    except InvalidTokenError:
+        return payload
+
+    except jwt.ExpiredSignatureError:
+        logger.warning("JWT rejected: token expired.")
+
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid or expired authentication token.",
+            detail="Authentication token has expired.",
+        )
+
+    except jwt.InvalidSignatureError:
+        logger.warning("JWT rejected: invalid signature.")
+
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid authentication token signature.",
+        )
+
+    except jwt.DecodeError as exc:
+        logger.warning(
+            "JWT rejected: decode error: %s",
+            exc,
+        )
+
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Authentication token could not be decoded.",
+        )
+
+    except jwt.InvalidTokenError as exc:
+        logger.warning(
+            "JWT rejected: invalid token: %s",
+            exc,
+        )
+
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid authentication token.",
         )
 
 
@@ -184,7 +225,7 @@ def get_current_user(
     if not user_id:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid authentication token.",
+            detail="Authentication token does not contain a user ID.",
         )
 
     user = (
@@ -213,22 +254,6 @@ def get_current_user(
 # ---------------------------------------------------------------------------
 
 def require_roles(*allowed_roles: str):
-    """
-    Dependency used to protect endpoints by role.
-
-    Example:
-
-        @router.post("/approve")
-        def approve(
-            current_user = Depends(
-                require_roles(
-                    models.Role.COMMANDER.value,
-                    models.Role.ADMIN.value,
-                )
-            )
-        ):
-            ...
-    """
 
     def role_checker(
         current_user: models.User = Depends(get_current_user),
@@ -237,10 +262,7 @@ def require_roles(*allowed_roles: str):
         if current_user.role not in allowed_roles:
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
-                detail=(
-                    "You do not have permission "
-                    "to perform this action."
-                ),
+                detail="You do not have permission to perform this action.",
             )
 
         return current_user
