@@ -2,38 +2,70 @@ import { useEffect, useMemo, useState } from "react";
 import { api } from "../api/client";
 import SeverityBadge from "../components/SeverityBadge";
 
-function MetricCard({ icon, label, value, subtitle, className = "" }) {
+function MetricCard({
+  icon,
+  label,
+  value,
+  subtitle,
+  className = "",
+}) {
   return (
     <div className={`dashboard-metric-card ${className}`}>
       <div className="dashboard-metric-icon">{icon}</div>
 
       <div className="dashboard-metric-content">
         <div className="dashboard-metric-label">{label}</div>
-        <div className="dashboard-metric-value">{value}</div>
+
+        <div className="dashboard-metric-value">
+          {value}
+        </div>
 
         {subtitle && (
-          <div className="dashboard-metric-subtitle">{subtitle}</div>
+          <div className="dashboard-metric-subtitle">
+            {subtitle}
+          </div>
         )}
       </div>
     </div>
   );
 }
 
-function ResourceCard({ icon, title, value, status, className = "" }) {
+function ResourceCard({
+  icon,
+  title,
+  value,
+  status,
+  className = "",
+}) {
   return (
     <div className={`resource-summary-card ${className}`}>
-      <div className="resource-summary-icon">{icon}</div>
-      <div className="resource-summary-title">{title}</div>
-      <div className="resource-summary-value">{value}</div>
-      <div className="resource-summary-status">{status}</div>
+      <div className="resource-summary-icon">
+        {icon}
+      </div>
+
+      <div className="resource-summary-title">
+        {title}
+      </div>
+
+      <div className="resource-summary-value">
+        {value}
+      </div>
+
+      <div className="resource-summary-status">
+        {status}
+      </div>
     </div>
   );
 }
 
-export default function Dashboard({ navigate }) {
+export default function Dashboard({
+  onOpenIncident,
+  onNavigate,
+}) {
   const [stats, setStats] = useState(null);
   const [incidents, setIncidents] = useState([]);
   const [hospitals, setHospitals] = useState([]);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -45,16 +77,20 @@ export default function Dashboard({ navigate }) {
         setLoading(true);
         setError("");
 
-        const [statsData, incidentsData, hospitalsData] =
-          await Promise.all([
-            api.dashboardStats(),
-            api.listIncidents(),
-            api.listHospitals(),
-          ]);
+        const [
+          statsData,
+          incidentsData,
+          hospitalsData,
+        ] = await Promise.all([
+          api.dashboardStats(),
+          api.listIncidents(),
+          api.listHospitals(),
+        ]);
 
         if (cancelled) return;
 
         setStats(statsData || {});
+
         setIncidents(
           Array.isArray(incidentsData)
             ? incidentsData
@@ -111,7 +147,9 @@ export default function Dashboard({ navigate }) {
     stats?.fire_units_available ?? 0;
 
   const totalAvailableResources =
-    ambulances + rescueTeams + fireUnits;
+    ambulances +
+    rescueTeams +
+    fireUnits;
 
   const totalIncidents = useMemo(() => {
     if (incidents.length > 0) {
@@ -128,32 +166,31 @@ export default function Dashboard({ navigate }) {
   const highCount = useMemo(() => {
     return incidents.filter(
       (incident) =>
-        String(incident?.severity || "").toUpperCase() ===
-        "HIGH"
+        String(
+          incident?.severity || ""
+        ).toUpperCase() === "HIGH"
     ).length;
   }, [incidents]);
 
   const recentIncidents = useMemo(() => {
     return [...incidents]
       .sort((a, b) => {
-        const aDate = new Date(
-          a?.created_at || a?.updated_at || 0
+        const dateA = new Date(
+          a?.created_at ||
+            a?.updated_at ||
+            0
         );
 
-        const bDate = new Date(
-          b?.created_at || b?.updated_at || 0
+        const dateB = new Date(
+          b?.created_at ||
+            b?.updated_at ||
+            0
         );
 
-        return bDate - aDate;
+        return dateB - dateA;
       })
       .slice(0, 6);
   }, [incidents]);
-
-  const handleNavigate = (page, payload = null) => {
-    if (typeof navigate === "function") {
-      navigate(page, payload);
-    }
-  };
 
   if (!stats && loading) {
     return (
@@ -167,9 +204,7 @@ export default function Dashboard({ navigate }) {
 
   return (
     <div className="modern-dashboard">
-      {/* =====================================================
-          TOP HEADER
-          ===================================================== */}
+      {/* HEADER */}
 
       <div className="dashboard-top-header">
         <div>
@@ -178,8 +213,8 @@ export default function Dashboard({ navigate }) {
           </h1>
 
           <p className="dashboard-welcome-subtitle">
-            AI-assisted emergency response and resource
-            coordination across Pakistan
+            AI-assisted emergency response and
+            resource coordination across Pakistan
           </p>
         </div>
 
@@ -192,7 +227,7 @@ export default function Dashboard({ navigate }) {
           <button
             className="dashboard-demo-button"
             onClick={() =>
-              handleNavigate("incidents")
+              onNavigate?.("incidents")
             }
           >
             View Incidents
@@ -206,9 +241,7 @@ export default function Dashboard({ navigate }) {
         </div>
       )}
 
-      {/* =====================================================
-          PRIMARY KPI CARDS
-          ===================================================== */}
+      {/* PRIMARY METRICS */}
 
       <div className="dashboard-metric-grid">
         <MetricCard
@@ -260,9 +293,7 @@ export default function Dashboard({ navigate }) {
         />
       </div>
 
-      {/* =====================================================
-          SECONDARY KPI CARDS
-          ===================================================== */}
+      {/* SECONDARY STATS */}
 
       <div className="dashboard-secondary-stats">
         <div className="secondary-stat">
@@ -330,27 +361,24 @@ export default function Dashboard({ navigate }) {
         </div>
       </div>
 
-      {/* =====================================================
-          MAIN DASHBOARD AREA
-          ===================================================== */}
+      {/* MAIN GRID */}
 
       <div className="dashboard-main-grid">
-        {/* Operational Overview */}
-
         <div className="dashboard-panel">
           <div className="dashboard-panel-header">
             <div>
               <h3>Operational Overview</h3>
+
               <p>
-                Live emergency and response readiness
-                summary
+                Live emergency and response
+                readiness summary
               </p>
             </div>
 
             <button
               className="panel-action-link"
               onClick={() =>
-                handleNavigate("map")
+                onNavigate?.("map")
               }
             >
               View Map
@@ -397,7 +425,7 @@ export default function Dashboard({ navigate }) {
             <button
               className="overview-map-button"
               onClick={() =>
-                handleNavigate("map")
+                onNavigate?.("map")
               }
             >
               Open Operational Map
@@ -405,12 +433,13 @@ export default function Dashboard({ navigate }) {
           </div>
         </div>
 
-        {/* Recent Incidents */}
+        {/* RECENT INCIDENTS */}
 
         <div className="dashboard-panel">
           <div className="dashboard-panel-header">
             <div>
               <h3>Recent Incidents</h3>
+
               <p>
                 Latest emergency reports
               </p>
@@ -419,7 +448,7 @@ export default function Dashboard({ navigate }) {
             <button
               className="panel-action-link"
               onClick={() =>
-                handleNavigate("incidents")
+                onNavigate?.("incidents")
               }
             >
               View All
@@ -432,71 +461,70 @@ export default function Dashboard({ navigate }) {
                 No recent incidents available.
               </div>
             ) : (
-              recentIncidents.map((incident) => (
-                <button
-                  key={incident.id}
-                  className="recent-incident-item"
-                  onClick={() =>
-                    handleNavigate(
-                      "incident-detail",
-                      incident.id
-                    )
-                  }
-                >
-                  <div className="recent-incident-icon">
-                    🚨
-                  </div>
-
-                  <div className="recent-incident-main">
-                    <div className="recent-incident-title">
-                      {incident.title ||
-                        incident.incident_type ||
-                        "Emergency Incident"}
+              recentIncidents.map(
+                (incident) => (
+                  <button
+                    key={incident.id}
+                    className="recent-incident-item"
+                    onClick={() =>
+                      onOpenIncident?.(
+                        incident.id
+                      )
+                    }
+                  >
+                    <div className="recent-incident-icon">
+                      🚨
                     </div>
 
-                    <div className="recent-incident-location">
-                      📍{" "}
-                      {incident.location_text ||
-                        incident.location ||
-                        "Location unavailable"}
-                    </div>
-                  </div>
+                    <div className="recent-incident-main">
+                      <div className="recent-incident-title">
+                        {incident.title ||
+                          incident.incident_type ||
+                          "Emergency Incident"}
+                      </div>
 
-                  <div className="recent-incident-badge">
-                    <SeverityBadge
-                      severity={
-                        incident.severity ||
-                        "UNKNOWN"
-                      }
-                    />
-                  </div>
-                </button>
-              ))
+                      <div className="recent-incident-location">
+                        📍{" "}
+                        {incident.location_text ||
+                          incident.location ||
+                          "Location unavailable"}
+                      </div>
+                    </div>
+
+                    <div className="recent-incident-badge">
+                      <SeverityBadge
+                        severity={
+                          incident.severity ||
+                          "UNKNOWN"
+                        }
+                      />
+                    </div>
+                  </button>
+                )
+              )
             )}
           </div>
         </div>
       </div>
 
-      {/* =====================================================
-          RESOURCES + SYSTEM STATUS
-          ===================================================== */}
+      {/* BOTTOM GRID */}
 
       <div className="dashboard-bottom-grid">
-        {/* Resource Status */}
-
         <div className="dashboard-panel">
           <div className="dashboard-panel-header">
             <div>
               <h3>Resource Status</h3>
+
               <p>
-                Current emergency-response capacity
+                Current emergency-response
+                capacity
               </p>
             </div>
 
             <button
               className="panel-action-link"
               onClick={() =>
-                handleNavigate("resources")
+                onNavigate?.("resources")
               }
             >
               Manage Resources
@@ -538,12 +566,13 @@ export default function Dashboard({ navigate }) {
           </div>
         </div>
 
-        {/* System Status */}
+        {/* SYSTEM STATUS */}
 
         <div className="dashboard-panel">
           <div className="dashboard-panel-header">
             <div>
               <h3>System Status</h3>
+
               <p>
                 RescueAI service availability
               </p>
@@ -551,67 +580,34 @@ export default function Dashboard({ navigate }) {
           </div>
 
           <div className="system-status-list">
-            <div className="system-status-row">
-              <span>
-                <span className="system-green-dot" />
-                AI Decision Support
-              </span>
+            {[
+              "AI Decision Support",
+              "Incident Management",
+              "Resource Coordination",
+              "Hospital Network",
+              "Human Approval Layer",
+            ].map((item, index) => (
+              <div
+                className="system-status-row"
+                key={item}
+              >
+                <span>
+                  <span className="system-green-dot" />
+                  {item}
+                </span>
 
-              <span className="system-online">
-                ONLINE
-              </span>
-            </div>
-
-            <div className="system-status-row">
-              <span>
-                <span className="system-green-dot" />
-                Incident Management
-              </span>
-
-              <span className="system-online">
-                ONLINE
-              </span>
-            </div>
-
-            <div className="system-status-row">
-              <span>
-                <span className="system-green-dot" />
-                Resource Coordination
-              </span>
-
-              <span className="system-online">
-                ONLINE
-              </span>
-            </div>
-
-            <div className="system-status-row">
-              <span>
-                <span className="system-green-dot" />
-                Hospital Network
-              </span>
-
-              <span className="system-online">
-                ONLINE
-              </span>
-            </div>
-
-            <div className="system-status-row">
-              <span>
-                <span className="system-green-dot" />
-                Human Approval Layer
-              </span>
-
-              <span className="system-online">
-                ACTIVE
-              </span>
-            </div>
+                <span className="system-online">
+                  {index === 4
+                    ? "ACTIVE"
+                    : "ONLINE"}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* =====================================================
-          SAFETY BANNER
-          ===================================================== */}
+      {/* SAFETY BANNER */}
 
       <div className="dashboard-safety-banner">
         <div>
@@ -619,9 +615,10 @@ export default function Dashboard({ navigate }) {
             i
           </span>
 
-          RescueAI provides AI-assisted recommendations.
-          Operational deployment decisions remain subject
-          to authorized human review and approval.
+          RescueAI provides AI-assisted
+          recommendations. Operational deployment
+          decisions remain subject to authorized
+          human review and approval.
         </div>
 
         <div className="dashboard-team-label">
