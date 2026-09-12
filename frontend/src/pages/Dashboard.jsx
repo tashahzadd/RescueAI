@@ -1,204 +1,204 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { api } from "../api/client.js";
-import SeverityBadge from "../components/SeverityBadge.jsx";
+import { useEffect, useMemo, useState } from "react";
+import { api } from "../api/client";
+import SeverityBadge from "../components/SeverityBadge";
 
-
-function MetricCard({
-  icon,
-  label,
-  value,
-  className = "",
-  subtitle,
-}) {
+function MetricCard({ icon, label, value, subtitle, className = "" }) {
   return (
     <div className={`dashboard-metric-card ${className}`}>
-      <div className="dashboard-metric-icon">
-        {icon}
-      </div>
+      <div className="dashboard-metric-icon">{icon}</div>
 
       <div className="dashboard-metric-content">
-        <div className="dashboard-metric-label">
-          {label}
-        </div>
-
-        <div className="dashboard-metric-value">
-          {value ?? 0}
-        </div>
+        <div className="dashboard-metric-label">{label}</div>
+        <div className="dashboard-metric-value">{value}</div>
 
         {subtitle && (
-          <div className="dashboard-metric-subtitle">
-            {subtitle}
-          </div>
+          <div className="dashboard-metric-subtitle">{subtitle}</div>
         )}
       </div>
     </div>
   );
 }
 
-
-function ResourceCard({
-  icon,
-  title,
-  value,
-  className = "",
-}) {
+function ResourceCard({ icon, title, value, status, className = "" }) {
   return (
     <div className={`resource-summary-card ${className}`}>
-      <div className="resource-summary-icon">
-        {icon}
-      </div>
-
-      <div className="resource-summary-title">
-        {title}
-      </div>
-
-      <div className="resource-summary-value">
-        {value ?? 0}
-      </div>
-
-      <div className="resource-summary-status">
-        Available
-      </div>
+      <div className="resource-summary-icon">{icon}</div>
+      <div className="resource-summary-title">{title}</div>
+      <div className="resource-summary-value">{value}</div>
+      <div className="resource-summary-status">{status}</div>
     </div>
   );
 }
 
-
-export default function Dashboard({
-  onOpenIncident,
-  onNavigate,
-}) {
+export default function Dashboard({ navigate }) {
   const [stats, setStats] = useState(null);
   const [incidents, setIncidents] = useState([]);
   const [hospitals, setHospitals] = useState([]);
-
   const [loading, setLoading] = useState(true);
-  const [demoLoading, setDemoLoading] =
-    useState(false);
-
-  const [error, setError] = useState(null);
-
-
-  const load = async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const [
-        dashboardStats,
-        incidentData,
-        hospitalData,
-      ] = await Promise.all([
-        api.dashboardStats(),
-        api.listIncidents(),
-        api.listHospitals(),
-      ]);
-
-      setStats(dashboardStats);
-      setIncidents(incidentData);
-      setHospitals(hospitalData);
-    } catch (e) {
-      setError(e.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    load();
+    let cancelled = false;
+
+    async function loadDashboard() {
+      try {
+        setLoading(true);
+        setError("");
+
+        const [statsData, incidentsData, hospitalsData] =
+          await Promise.all([
+            api.dashboardStats(),
+            api.listIncidents(),
+            api.listHospitals(),
+          ]);
+
+        if (cancelled) return;
+
+        setStats(statsData || {});
+        setIncidents(
+          Array.isArray(incidentsData)
+            ? incidentsData
+            : incidentsData?.items || []
+        );
+
+        setHospitals(
+          Array.isArray(hospitalsData)
+            ? hospitalsData
+            : hospitalsData?.items || []
+        );
+      } catch (err) {
+        console.error("Dashboard load failed:", err);
+
+        if (!cancelled) {
+          setError(
+            err?.message ||
+              "Unable to load dashboard information."
+          );
+        }
+      } finally {
+        if (!cancelled) {
+          setLoading(false);
+        }
+      }
+    }
+
+    loadDashboard();
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
+  const activeIncidents =
+    stats?.active_incidents ?? 0;
 
-  const runDemo = async () => {
-    setDemoLoading(true);
-    setError(null);
+  const criticalIncidents =
+    stats?.critical_incidents ?? 0;
 
-    try {
-      const res =
-        await api.loadDemoScenario();
+  const resolvedIncidents =
+    stats?.resolved_incidents ?? 0;
 
-      await load();
+  const pendingPlans =
+    stats?.pending_approvals ?? 0;
 
-      onOpenIncident(
-        res.incident_id
-      );
-    } catch (e) {
-      setError(e.message);
-    } finally {
-      setDemoLoading(false);
+  const ambulances =
+    stats?.ambulances_available ?? 0;
+
+  const rescueTeams =
+    stats?.rescue_teams_available ?? 0;
+
+  const fireUnits =
+    stats?.fire_units_available ?? 0;
+
+  const totalAvailableResources =
+    ambulances + rescueTeams + fireUnits;
+
+  const totalIncidents = useMemo(() => {
+    if (incidents.length > 0) {
+      return incidents.length;
+    }
+
+    return activeIncidents + resolvedIncidents;
+  }, [
+    incidents,
+    activeIncidents,
+    resolvedIncidents,
+  ]);
+
+  const highCount = useMemo(() => {
+    return incidents.filter(
+      (incident) =>
+        String(incident?.severity || "").toUpperCase() ===
+        "HIGH"
+    ).length;
+  }, [incidents]);
+
+  const recentIncidents = useMemo(() => {
+    return [...incidents]
+      .sort((a, b) => {
+        const aDate = new Date(
+          a?.created_at || a?.updated_at || 0
+        );
+
+        const bDate = new Date(
+          b?.created_at || b?.updated_at || 0
+        );
+
+        return bDate - aDate;
+      })
+      .slice(0, 6);
+  }, [incidents]);
+
+  const handleNavigate = (page, payload = null) => {
+    if (typeof navigate === "function") {
+      navigate(page, payload);
     }
   };
 
-
-  const recentIncidents =
-    useMemo(
-      () => incidents.slice(0, 6),
-      [incidents]
+  if (!stats && loading) {
+    return (
+      <div className="modern-dashboard">
+        <div className="dashboard-loading">
+          Loading RescueAI Command Center...
+        </div>
+      </div>
     );
-
-
-  const totalAvailableResources =
-    (stats?.ambulances_available || 0) +
-    (stats?.rescue_teams_available || 0) +
-    (stats?.fire_units_available || 0);
-
-
-  const activeCount =
-    stats?.active_incidents || 0;
-
-  const criticalCount =
-    stats?.critical_incidents || 0;
-
-  const highCount =
-    stats?.high_incidents || 0;
-
-  const resolvedCount =
-    stats?.resolved_incidents || 0;
-
+  }
 
   return (
     <div className="modern-dashboard">
-
-      {/* ---------------------------------------------------------
+      {/* =====================================================
           TOP HEADER
-      --------------------------------------------------------- */}
+          ===================================================== */}
 
       <div className="dashboard-top-header">
-
         <div>
           <h1 className="dashboard-welcome-title">
-            Welcome back, RescueAI Team
+            RescueAI Command Center
           </h1>
 
           <p className="dashboard-welcome-subtitle">
-            Here&apos;s the current emergency-response
-            situation across the system.
+            AI-assisted emergency response and resource
+            coordination across Pakistan
           </p>
         </div>
 
-
         <div className="dashboard-header-actions">
-
           <div className="system-live-badge">
-            <span className="live-dot"></span>
-            Live System
+            <span className="live-dot" />
+            System Operational
           </div>
-
 
           <button
             className="dashboard-demo-button"
-            onClick={runDemo}
-            disabled={demoLoading}
+            onClick={() =>
+              handleNavigate("incidents")
+            }
           >
-            {demoLoading
-              ? "Loading..."
-              : "▶ Load Demo Incident"}
+            View Incidents
           </button>
-
         </div>
       </div>
-
 
       {error && (
         <div className="alert alert-error">
@@ -206,161 +206,428 @@ export default function Dashboard({
         </div>
       )}
 
+      {/* =====================================================
+          PRIMARY KPI CARDS
+          ===================================================== */}
 
-      {loading && (
-        <div className="dashboard-loading">
-          Loading RescueAI operational data...
+      <div className="dashboard-metric-grid">
+        <MetricCard
+          icon="🚨"
+          label="Critical Incidents"
+          value={criticalIncidents}
+          subtitle="Require immediate attention"
+          className="metric-critical"
+        />
+
+        <MetricCard
+          icon="⚠️"
+          label="Active Incidents"
+          value={activeIncidents}
+          subtitle="Currently being monitored"
+          className="metric-active"
+        />
+
+        <MetricCard
+          icon="📋"
+          label="Total Incidents"
+          value={totalIncidents}
+          subtitle="Recorded in the system"
+          className="metric-total"
+        />
+
+        <MetricCard
+          icon="🚑"
+          label="Available Resources"
+          value={totalAvailableResources}
+          subtitle="Ambulances, rescue and fire units"
+          className="metric-resources"
+        />
+
+        <MetricCard
+          icon="🏥"
+          label="Hospitals in Network"
+          value={hospitals.length}
+          subtitle="Emergency care facilities"
+          className="metric-hospitals"
+        />
+
+        <MetricCard
+          icon="🤖"
+          label="Pending AI Plans"
+          value={pendingPlans}
+          subtitle="Awaiting human approval"
+          className="metric-ai"
+        />
+      </div>
+
+      {/* =====================================================
+          SECONDARY KPI CARDS
+          ===================================================== */}
+
+      <div className="dashboard-secondary-stats">
+        <div className="secondary-stat">
+          <span className="secondary-stat-icon">
+            🔥
+          </span>
+
+          <div>
+            <span className="secondary-stat-value">
+              {highCount}
+            </span>
+
+            <span className="secondary-stat-label">
+              High Priority
+            </span>
+          </div>
         </div>
-      )}
 
+        <div className="secondary-stat">
+          <span className="secondary-stat-icon">
+            ✅
+          </span>
 
-      {stats && (
-        <>
+          <div>
+            <span className="secondary-stat-value">
+              {resolvedIncidents}
+            </span>
 
-          {/* -----------------------------------------------------
-              KPI CARDS
-          ----------------------------------------------------- */}
+            <span className="secondary-stat-label">
+              Resolved Incidents
+            </span>
+          </div>
+        </div>
 
-          <div className="dashboard-metric-grid">
+        <div className="secondary-stat">
+          <span className="secondary-stat-icon">
+            🚒
+          </span>
 
-            <MetricCard
-              icon="🚨"
-              label="Critical Incidents"
-              value={criticalCount}
-              className="metric-critical"
-              subtitle="Highest response priority"
-            />
+          <div>
+            <span className="secondary-stat-value">
+              {fireUnits}
+            </span>
 
+            <span className="secondary-stat-label">
+              Fire Units Available
+            </span>
+          </div>
+        </div>
 
-            <MetricCard
-              icon="⚠️"
-              label="Active Incidents"
-              value={activeCount}
-              className="metric-active"
-              subtitle="Currently under response"
-            />
+        <div className="secondary-stat">
+          <span className="secondary-stat-icon">
+            🧑‍🚒
+          </span>
 
+          <div>
+            <span className="secondary-stat-value">
+              {rescueTeams}
+            </span>
 
-            <MetricCard
-              icon="📋"
-              label="Total Incidents"
-              value={incidents.length}
-              className="metric-total"
-              subtitle="Recorded in RescueAI"
-            />
+            <span className="secondary-stat-label">
+              Rescue Teams Available
+            </span>
+          </div>
+        </div>
+      </div>
 
+      {/* =====================================================
+          MAIN DASHBOARD AREA
+          ===================================================== */}
 
-            <MetricCard
+      <div className="dashboard-main-grid">
+        {/* Operational Overview */}
+
+        <div className="dashboard-panel">
+          <div className="dashboard-panel-header">
+            <div>
+              <h3>Operational Overview</h3>
+              <p>
+                Live emergency and response readiness
+                summary
+              </p>
+            </div>
+
+            <button
+              className="panel-action-link"
+              onClick={() =>
+                handleNavigate("map")
+              }
+            >
+              View Map
+            </button>
+          </div>
+
+          <div className="operational-overview">
+            <div className="overview-main-number">
+              {activeIncidents}
+            </div>
+
+            <div className="overview-main-label">
+              Active Incidents
+            </div>
+
+            <div className="overview-status-grid">
+              <div className="overview-status-item">
+                <span className="status-dot critical-dot" />
+                <strong>{criticalIncidents}</strong>
+                Critical
+              </div>
+
+              <div className="overview-status-item">
+                <span className="status-dot high-dot" />
+                <strong>{highCount}</strong>
+                High
+              </div>
+
+              <div className="overview-status-item">
+                <span className="status-dot resolved-dot" />
+                <strong>{resolvedIncidents}</strong>
+                Resolved
+              </div>
+
+              <div className="overview-status-item">
+                <span className="status-dot resource-dot" />
+                <strong>
+                  {totalAvailableResources}
+                </strong>
+                Resources
+              </div>
+            </div>
+
+            <button
+              className="overview-map-button"
+              onClick={() =>
+                handleNavigate("map")
+              }
+            >
+              Open Operational Map
+            </button>
+          </div>
+        </div>
+
+        {/* Recent Incidents */}
+
+        <div className="dashboard-panel">
+          <div className="dashboard-panel-header">
+            <div>
+              <h3>Recent Incidents</h3>
+              <p>
+                Latest emergency reports
+              </p>
+            </div>
+
+            <button
+              className="panel-action-link"
+              onClick={() =>
+                handleNavigate("incidents")
+              }
+            >
+              View All
+            </button>
+          </div>
+
+          <div className="recent-incident-list">
+            {recentIncidents.length === 0 ? (
+              <div className="empty-dashboard-state">
+                No recent incidents available.
+              </div>
+            ) : (
+              recentIncidents.map((incident) => (
+                <button
+                  key={incident.id}
+                  className="recent-incident-item"
+                  onClick={() =>
+                    handleNavigate(
+                      "incident-detail",
+                      incident.id
+                    )
+                  }
+                >
+                  <div className="recent-incident-icon">
+                    🚨
+                  </div>
+
+                  <div className="recent-incident-main">
+                    <div className="recent-incident-title">
+                      {incident.title ||
+                        incident.incident_type ||
+                        "Emergency Incident"}
+                    </div>
+
+                    <div className="recent-incident-location">
+                      📍{" "}
+                      {incident.location_text ||
+                        incident.location ||
+                        "Location unavailable"}
+                    </div>
+                  </div>
+
+                  <div className="recent-incident-badge">
+                    <SeverityBadge
+                      severity={
+                        incident.severity ||
+                        "UNKNOWN"
+                      }
+                    />
+                  </div>
+                </button>
+              ))
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* =====================================================
+          RESOURCES + SYSTEM STATUS
+          ===================================================== */}
+
+      <div className="dashboard-bottom-grid">
+        {/* Resource Status */}
+
+        <div className="dashboard-panel">
+          <div className="dashboard-panel-header">
+            <div>
+              <h3>Resource Status</h3>
+              <p>
+                Current emergency-response capacity
+              </p>
+            </div>
+
+            <button
+              className="panel-action-link"
+              onClick={() =>
+                handleNavigate("resources")
+              }
+            >
+              Manage Resources
+            </button>
+          </div>
+
+          <div className="resource-summary-grid">
+            <ResourceCard
               icon="🚑"
-              label="Available Resources"
-              value={totalAvailableResources}
-              className="metric-resources"
-              subtitle="Ready for assignment"
+              title="Ambulances"
+              value={ambulances}
+              status="Available"
+              className="resource-ambulance"
             />
 
+            <ResourceCard
+              icon="🧑‍🚒"
+              title="Rescue Teams"
+              value={rescueTeams}
+              status="Available"
+              className="resource-rescue"
+            />
 
-            <MetricCard
+            <ResourceCard
+              icon="🚒"
+              title="Fire Units"
+              value={fireUnits}
+              status="Available"
+              className="resource-fire"
+            />
+
+            <ResourceCard
               icon="🏥"
-              label="Hospitals in Network"
+              title="Hospitals"
               value={hospitals.length}
-              className="metric-hospitals"
-              subtitle="Registered facilities"
+              status="In Network"
+              className="resource-hospital"
             />
+          </div>
+        </div>
 
+        {/* System Status */}
 
-            <MetricCard
-              icon="🤖"
-              label="Pending AI Plans"
-              value={stats.pending_approvals}
-              className="metric-ai"
-              subtitle="Awaiting human approval"
-            />
-
+        <div className="dashboard-panel">
+          <div className="dashboard-panel-header">
+            <div>
+              <h3>System Status</h3>
+              <p>
+                RescueAI service availability
+              </p>
+            </div>
           </div>
 
-
-          {/* -----------------------------------------------------
-              SECONDARY KPI ROW
-          ----------------------------------------------------- */}
-
-          <div className="dashboard-secondary-stats">
-
-            <div className="secondary-stat">
-              <span className="secondary-stat-icon">
-                🔥
+          <div className="system-status-list">
+            <div className="system-status-row">
+              <span>
+                <span className="system-green-dot" />
+                AI Decision Support
               </span>
 
-              <div>
-                <span className="secondary-stat-value">
-                  {highCount}
-                </span>
-
-                <span className="secondary-stat-label">
-                  High Priority
-                </span>
-              </div>
+              <span className="system-online">
+                ONLINE
+              </span>
             </div>
 
-
-            <div className="secondary-stat">
-              <span className="secondary-stat-icon">
-                ✅
+            <div className="system-status-row">
+              <span>
+                <span className="system-green-dot" />
+                Incident Management
               </span>
 
-              <div>
-                <span className="secondary-stat-value">
-                  {resolvedCount}
-                </span>
-
-                <span className="secondary-stat-label">
-                  Resolved Incidents
-                </span>
-              </div>
+              <span className="system-online">
+                ONLINE
+              </span>
             </div>
 
-
-            <div className="secondary-stat">
-              <span className="secondary-stat-icon">
-                🚒
+            <div className="system-status-row">
+              <span>
+                <span className="system-green-dot" />
+                Resource Coordination
               </span>
 
-              <div>
-                <span className="secondary-stat-value">
-                  {stats.fire_units_available}
-                </span>
-
-                <span className="secondary-stat-label">
-                  Fire Units Available
-                </span>
-              </div>
+              <span className="system-online">
+                ONLINE
+              </span>
             </div>
 
-
-            <div className="secondary-stat">
-              <span className="secondary-stat-icon">
-                🧑‍🚒
+            <div className="system-status-row">
+              <span>
+                <span className="system-green-dot" />
+                Hospital Network
               </span>
 
-              <div>
-                <span className="secondary-stat-value">
-                  {stats.rescue_teams_available}
-                </span>
-
-                <span className="secondary-stat-label">
-                  Rescue Teams Available
-                </span>
-              </div>
+              <span className="system-online">
+                ONLINE
+              </span>
             </div>
 
+            <div className="system-status-row">
+              <span>
+                <span className="system-green-dot" />
+                Human Approval Layer
+              </span>
+
+              <span className="system-online">
+                ACTIVE
+              </span>
+            </div>
           </div>
+        </div>
+      </div>
 
+      {/* =====================================================
+          SAFETY BANNER
+          ===================================================== */}
 
-          {/* -----------------------------------------------------
-              MAIN DASHBOARD AREA
-          ----------------------------------------------------- */}
+      <div className="dashboard-safety-banner">
+        <div>
+          <span className="dashboard-info-icon">
+            i
+          </span>
 
-          <div className="dashboard-main-grid">
+          RescueAI provides AI-assisted recommendations.
+          Operational deployment decisions remain subject
+          to authorized human review and approval.
+        </div>
 
-            {/* Operational Overview */}
-
-            <div class
+        <div className="dashboard-team-label">
+          Team RescueAI • Pak Angels Cohort 11
+        </div>
+      </div>
+    </div>
+  );
+}
