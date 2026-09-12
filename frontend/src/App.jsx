@@ -111,12 +111,24 @@ function LoginScreen({ onLogin }) {
           <p
             style={{
               marginTop: "8px",
-              marginBottom: 0,
-              color: "#64748b",
+              marginBottom: "4px",
+              color: "#475569",
               fontSize: "14px",
+              fontWeight: 600,
             }}
           >
-            Emergency Response Command Center
+            AI Emergency Response System
+          </p>
+
+          <p
+            style={{
+              marginTop: "4px",
+              marginBottom: 0,
+              color: "#64748b",
+              fontSize: "13px",
+            }}
+          >
+            Pak Angels GenAI & Agentic AI — Cohort 11
           </p>
         </div>
 
@@ -251,7 +263,7 @@ function LoginScreen({ onLogin }) {
             lineHeight: 1.6,
           }}
         >
-          Authorized emergency-response personnel only.
+          Team RescueAI — Cohort 11 Hackathon Project
           <br />
           AI recommendations require human approval.
         </div>
@@ -263,6 +275,7 @@ function LoginScreen({ onLogin }) {
 
 export default function App() {
   const [page, setPage] = useState("dashboard");
+
   const [selectedIncidentId, setSelectedIncidentId] =
     useState(null);
 
@@ -273,10 +286,6 @@ export default function App() {
   const [authChecking, setAuthChecking] =
     useState(isAuthenticated());
 
-
-  // ---------------------------------------------------------------------------
-  // Validate any previously stored session when the app starts.
-  // ---------------------------------------------------------------------------
 
   useEffect(() => {
     const validateSession = async () => {
@@ -386,10 +395,6 @@ export default function App() {
   };
 
 
-  // ---------------------------------------------------------------------------
-  // Initial authentication check
-  // ---------------------------------------------------------------------------
-
   if (authChecking) {
     return (
       <div
@@ -408,10 +413,6 @@ export default function App() {
   }
 
 
-  // ---------------------------------------------------------------------------
-  // Not logged in -> Command Center login screen
-  // ---------------------------------------------------------------------------
-
   if (!user) {
     return (
       <LoginScreen
@@ -421,15 +422,13 @@ export default function App() {
   }
 
 
-  // ---------------------------------------------------------------------------
-  // Authenticated Command Center
-  // ---------------------------------------------------------------------------
-
   return (
     <div className="app-shell">
+
       <aside className="sidebar">
 
         <div className="sidebar-brand">
+
           <span className="brand-icon">
             🛟
           </span>
@@ -440,34 +439,41 @@ export default function App() {
             </div>
 
             <div className="brand-subtitle">
-              Decision-Support Only
+              AI Emergency Response System
             </div>
           </div>
+
         </div>
 
 
         <div
           style={{
-            padding: "12px 16px",
-            marginBottom: "6px",
-            fontSize: "12px",
+            padding: "10px 16px 14px",
+            marginBottom: "4px",
+            borderBottom:
+              "1px solid rgba(255,255,255,0.10)",
           }}
         >
           <div
             style={{
+              fontSize: "12px",
               fontWeight: 700,
-              marginBottom: "3px",
+              marginBottom: "4px",
             }}
           >
-            {user.name}
+            Pak Angels — Cohort 11
           </div>
 
           <div
             style={{
-              opacity: 0.75,
+              fontSize: "11px",
+              opacity: 0.72,
+              lineHeight: 1.5,
             }}
           >
-            {user.role}
+            GenAI & Agentic AI Hackathon
+            <br />
+            Team RescueAI
           </div>
         </div>
 
@@ -501,8 +507,30 @@ export default function App() {
         <div
           style={{
             padding: "14px 16px",
+            marginTop: "auto",
           }}
         >
+          <div
+            style={{
+              marginBottom: "10px",
+              fontSize: "11px",
+              opacity: 0.75,
+              lineHeight: 1.45,
+            }}
+          >
+            Signed in as
+            <br />
+
+            <strong
+              style={{
+                fontSize: "12px",
+              }}
+            >
+              {user.name}
+            </strong>
+          </div>
+
+
           <button
             onClick={handleLogout}
             style={{
@@ -524,19 +552,21 @@ export default function App() {
 
         <div className="sidebar-footer">
           <p>
-            Demo/synthetic data only.
+            Cohort 11 Hackathon Project
             <br />
-            AI never dispatches autonomously -
-            human approval required for every
-            response plan.
+            Human-in-the-loop AI Emergency Response
+            <br />
+            Demo / synthetic operational data
           </p>
         </div>
 
       </aside>
 
+
       <main className="main-content">
         {renderPage()}
       </main>
+
     </div>
   );
 }
